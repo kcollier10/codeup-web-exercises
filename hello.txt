@@ -3,3 +3,5 @@ Hewo!
 How are you doing today?
 
 I hope you are doing well.
+
+Today is my second day of Codeup!
