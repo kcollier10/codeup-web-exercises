@@ -9,3 +9,5 @@ Today is my second day of Codeup!
 I'm having a solid week so far.
 
 Tomorrow is a half-day and we're diving into JS.
+
+My favorite part so far is how helpful the instructors have been.
