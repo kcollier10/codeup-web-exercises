@@ -5,12 +5,15 @@ console.log("Hello from external JavaScript");
 alert("Welcome to my Website!");
 
 var color = prompt("What is your favorite color?");
-alert("Great! " + color + " is my favorite color, too!");
+var alertMessage = "Great! " + color + " is my favorite color, too!";
+alert(alertMessage);
 
 
 /* You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear
 (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it).
 If price for a movie per day is $3, how much will you have to pay? */
+
+var dailyRentalRate = Number(prompt("How much is the daily rate?"));
 
 var lm = Number(prompt("How many days did you rent The Little Mermaid?"));
 console.log(lm);
@@ -21,8 +24,9 @@ console.log(bb);
 var h = Number(prompt("How many days did you rent Hercules?"));
 console.log(h);
 
-var total = Number(lm + bb + h) * 3;
-console.log("Customer total is: " + total);
+var total = (lm + bb + h) * dailyRentalRate;
+var totalAlert = "You owe: $" + total.toFixed(2);
+alert(totalAlert);
 
 
 /* Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
@@ -54,24 +58,33 @@ console.log(payment);
 /* A student can be enrolled in a class only if the class is not full and the class schedule does not
 conflict with her current schedule. */
 
-var full = confirm("Click 'OK' if class is not full.");
-console.log(full);
+var notFull = confirm("Class is not full");
 
-var schedule = confirm("Click 'OK' if you have no other courses at this time.")
-console.log(schedule);
+var scheduleNoConflict = confirm("Schedule does not conflict");
+
+var enrolled = notFull && scheduleNoConflict
+var enrollmentAlert = "Student is enrolled?:" + enrolled;
+alert(enrollmentAlert);
 
 
 /* A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
 Premium members do not need to buy a specific amount of products. */
 
-var premium = confirm("Click 'OK' if you are a Premium member. Click 'Cancel' if you are not.");
-console.log(premium);
+/*
+1. offer must be valid no matter what
+2a. if they are a premium member, number of items does not matter
+2b. if they aren't premium, they must buy two items (use an OR operator)
 
-var numberItems = confirm("If you have purchased more than two (2) items, please click 'OK.'");
-console.log(numberItems);
+*/
 
-var expiration = confirm("Is today's date before the expiration date?");
-console.log(expiration);
+var numberItems = Number(prompt("How many items have you purchased?"));
+var validOffer = confirm("Is the offer valid?");
+var premium = confirm("Are you a Premium member?");
+
+var discount = validOffer && (numberItems > 2 || premium);
+alert("Discount available?: " + discount);
+
+
 
 
 
