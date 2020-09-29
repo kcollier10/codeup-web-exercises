@@ -14,6 +14,7 @@
         return "Hello, " + name + "!";
     }
 
+
     /*
      * TODO:
      * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -22,7 +23,7 @@
      * console.log 'helloMessage' to check your work
      */
 
-    sayHello("Kristen");
+    console.log(sayHello("Kristen"));
 
     var helloMessage = sayHello("Kristen");
     console.log(helloMessage);
@@ -37,7 +38,7 @@
 
     var myName = "Kristen";
 
-    sayHello(myName);
+    console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -63,12 +64,13 @@
      * different result everytime you refresh the page if you are using the random
      * number)
      */
-    function isTwo(x=2) {
-        return number === 2;
+    function isTwo(num) {
+        return num === 2;
     }
 
-    isTwo();
+    isTwo(random);
     console.log(random);
+    console.log(isTwo(random));
 
     /*
      * TODO:
@@ -86,8 +88,8 @@
         return bill * (tipPercentage/100);
     }
 
-    var tipTotal = calculateTip(80, 25)
-    console.log(tipTotal);
+    console.log(calculateTip(20, .20));
+
     /*
      * TODO:
      * Use prompt and alert in combination with your calculateTip function to
@@ -96,9 +98,10 @@
      */
 
     var billTotal = Number(prompt("Please enter your total bill:"));
-    var tip = Number(prompt("What percentage will you be tipping?"));
+    var tip = Number(prompt("What percentage will you be tipping? Please enter a number between 1-100."));
+    var totalAmount = Number(billTotal + (tip/100))
 
-    alert('Total today, including tip, is $' + bill + (tip/100).toFixed(2));
+    alert('Total today, including tip, is $' + totalAmount.toFixed(2));
 
 
     /*
@@ -118,7 +121,7 @@
 
     function applyDiscount(price, discountPercentage) {
         var discount = price * (discountPercentage / 100);
-        return price - discount;
+        return (price - discount).toFixed(2);
     }
 
         var newPrice = applyDiscount(80, 25);
