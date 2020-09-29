@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("hello from conditionals lec.js!");
+console.log("hello from redo-conditionals.js!");
 
 // ================ REAL WORLD SCENARIO ================
 // If a user is an admin,show a specific navbar
@@ -347,19 +347,20 @@ if(userAge < 15) {
 
 //TODO: Refactor the following conditional as a ternary
 
-// var weather = "sunny";
-// var weatherMessage;
+var weather = "sunny";
+var weatherMessage;
 
-// if(weather === "rainy"){
-//    weatherMessage = "It's raining!";
-// } else {
-//     weatherMessage = "Have a nice day!";
-// }
+if(weather === "rainy"){
+   weatherMessage = "It's raining!";
+} else {
+    weatherMessage = "Have a nice day!";
+}
 
 //WRITE YOUR TERNARY STATEMENT HERE!
 
 var weather = (false)
-var message = (weather === "rainy") ? "It's raining" : "Have a nice day!";
+var weatherMessage = (weather === "rainy") ? "It's raining" : "Have a nice day!";
+console.log(weatherMessage);
 
 // =============== SWITCH STATEMENT ================
 //TODO Together:
@@ -381,7 +382,7 @@ var message = (weather === "rainy") ? "It's raining" : "Have a nice day!";
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 
-var typeOfWeather = prompt("How's the weather?")
+var typeOfWeather = "windy";
 
 switch (typeOfWeather){
     case "rainy":
@@ -400,19 +401,39 @@ switch (typeOfWeather){
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
 
-var trafficLightColor = prompt("What color is the traffic light?");
 
-function whatToDo(trafficLightColor) {
-    if (trafficLightColor === "red") {
-        return "STOP!";
-    } else if (trafficLightColor === "yellow") {
-        return "SLOW DOWN!";
-    } else if (trafficLightColor === "green") {
-        return "GO!";
-    } else {
-        return "That light is broken!";
+function checkIntersection(trafficLightColor) {
+    switch (trafficLightColor)  {
+        case "red":
+            return "STOP!";
+        case "yellow":
+            return "SLOW DOWN!";
+        case "green":
+            return "GO!";
+        default:
+            return "That light is broken!";
     }
 }
+
+function checkIntersection(trafficLightColor) {
+    var returnMessage;
+    switch (trafficLightColor)  {
+        case "red":
+            returnMessage = "STOP!";
+            break;
+        case "yellow":
+            returnMessage  = "SLOW DOWN!";
+            break;
+        case "green":
+            returnMessage = "GO!";
+            break;
+        default:
+            returnMessage = "That light is broken!";
+            break;
+    }
+}
+
+console.log(checkIntersection("green"));
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
