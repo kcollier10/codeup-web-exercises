@@ -32,6 +32,8 @@ function analyzeColor(colorName) {
     }
 }
 
+analyzeColor("blue");
+
 console.log(analyzeColor("blue"));
 console.log(analyzeColor("green"));
 
@@ -48,10 +50,34 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+function colorGame(randomColor) {
+    if (randomColor === "red") {
+        return "Roses are red.";
+    } else if (randomColor === "orange") {
+        return "Cheetos are orange.";
+    } else if (randomColor === "yellow") {
+        return "Bananas are yellow";
+    } else if (randomColor === "green") {
+        return "Grass is green (sometimes).";
+    } else if (randomColor === "blue") {
+        return "The sky is blue.";
+    } else {
+        return "No color.";
+    }
+}
+
+console.log(colorGame(randomColor));
+console.log(colorGame(randomColor));
+console.log(colorGame(randomColor));
+
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+
+
 
 /**
  * TODO:
@@ -82,6 +108,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal(luckyNum, totalAmount) {
+    var discountedPrice;
+    if(luckyNum === 0) {
+        discountedPrice = totalAmount;
+    } else if (luckyNum === 1){
+        discountedPrice = totalAmount - (totalAmount * .1);
+    } else if (luckyNum === 2) {
+        discountedPrice = totalAmount - (totalAmount * .25);
+    } else if (luckyNum === 3) {
+        discountedPrice = totalAmount - (totalAmount * .35);
+    } else if (luckyNum === 4) {
+        discountedPrice = totalAmount - (totalAmount * .50);
+    } else if (luckyNum === 5) {
+        discountedPrice = 0;
+    } return discountedPrice;
+}
+
+console.log(calculateTotal(4, 400));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -89,8 +134,16 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ // Generate a random number between 0 and 6
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var userBill = Number(prompt("What was your total bill?")).toFixed(2)
+
+var totalAfterDiscount = calculateTotal(luckyNumber, userBill);
+alert("Your lucky number is: " + luckyNumber);
+alert("Before the discount, your price was: " + userBill)
+alert("Your total bill, after discount, is: " + totalAfterDiscount);
+
 
 /**
  * TODO:
@@ -108,3 +161,23 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+// self-note*** you can put vars in their own if/else statements instead of all in the top above 'if'
+
+function playAGame() {
+    var play = confirm("Would you like to play a game?");
+    if (play) {
+        var userNumber = prompt("Please enter a whole number.");
+        if(isNaN(userNumber)) {
+            alert("Sorry, that was not a whole number.");
+        } else {
+            var evenOrOdd = (userNumber % 2 === 0) ? "Your number is even." : "Your number is odd.";
+            var positiveOrNegative = (userNumber > 0) ? "Your number is positive." : "Your number is negative.";
+            alert(evenOrOdd);
+            alert("Your number, plus 100, is: " + (parseInt(userNumber) + 100));
+            alert(positiveOrNegative);
+        }
+    }
+}
+
+playAGane();
