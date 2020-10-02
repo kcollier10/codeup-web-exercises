@@ -175,11 +175,11 @@ while (i > 0) {
 //TODO TOGETHER: Create a do-while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
 
-// var i = 0;
-// do{
-//     console.log(i);
-//     i += 2;
-// } while(i <= 20);
+var i = 0;
+do{
+    console.log(i);
+    i += 2;
+} while(i <= 20);
 
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
