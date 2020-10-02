@@ -50,25 +50,34 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-function colorGame(randomColor) {
-    if (randomColor === "red") {
-        return "Roses are red.";
-    } else if (randomColor === "orange") {
-        return "Cheetos are orange.";
-    } else if (randomColor === "yellow") {
-        return "Bananas are yellow";
-    } else if (randomColor === "green") {
-        return "Grass is green (sometimes).";
-    } else if (randomColor === "blue") {
-        return "The sky is blue.";
-    } else {
-        return "No color.";
-    }
-}
+console.log("random color is: " + randomColor);
+console.log(analyzeColor(randomColor));
 
-console.log(colorGame(randomColor));
-console.log(colorGame(randomColor));
-console.log(colorGame(randomColor));
+// function colorGame(randomColor) {
+//     if (randomColor === "red") {
+//         return "Roses are red.";
+//     } else if (randomColor === "orange") {
+//         return "Cheetos are orange.";
+//     } else if (randomColor === "yellow") {
+//         return "Bananas are yellow";
+//     } else if (randomColor === "green") {
+//         return "Grass is green (sometimes).";
+//     } else if (randomColor === "blue") {
+//         return "The sky is blue.";
+//     } else if (randomColor === "indigo") {
+//         return "The 'I' in ROYGBIV";
+//     } else if (randomColor === "violet") {
+//         return "Violets are blue?";
+//     } else {
+//         return "No color.";
+//     }
+// }
+
+
+//
+// console.log(colorGame(randomColor));
+// console.log(colorGame(randomColor));
+// console.log(colorGame(randomColor));
 
 
 /**
@@ -76,9 +85,27 @@ console.log(colorGame(randomColor));
  * Refactor your above function to use a switch-case statement
  */
 
+function analyzeColorSwitch(colorName) {
+    var colorMessage;
 
+    switch (colorName) {
+        case "blue":
+            colorMessage = "Nice! The sky is blue.";
+            break;
+        case "red":
+            colorMessage = "Ladybugs are red.";
+            break;
+        case "cyan" :
+            colorMessage = "My printer talks about cyan.";
+            break;
+        default:
+            colorMessage = "Wut?";
+            break;
+    }
+    return colorMessage;
+}
 
-
+console.log((analyzeColorSwitch(randomColor)));
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
