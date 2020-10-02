@@ -85,6 +85,8 @@ console.log(analyzeColor(randomColor));
  * Refactor your above function to use a switch-case statement
  */
 
+// selfnote** dont forget you can just use return instead of doing the var + break! silly goose
+
 function analyzeColorSwitch(colorName) {
     var colorMessage;
 
@@ -112,6 +114,11 @@ console.log((analyzeColorSwitch(randomColor)));
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+var userInput = prompt("Please enter a color!");
+analyzeColor(userInput);
+console.log(analyzeColor(userInput));
+
 
 /* ########################################################################## */
 
