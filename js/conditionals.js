@@ -117,7 +117,8 @@ console.log((analyzeColorSwitch(randomColor)));
 
 var userInput = prompt("Please enter a color!");
 analyzeColor(userInput);
-console.log(analyzeColor(userInput));
+alert(analyzeColor(userInput));
+console.log((analyzeColor(userInput)));
 
 
 /* ########################################################################## */
@@ -214,4 +215,5 @@ function playAGame() {
     }
 }
 
-playAGane();
+playAGame();
+
