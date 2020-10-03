@@ -5,7 +5,7 @@ var userInput = prompt("Please enter an odd number.");
 // start at 0
 //include a break at userInput
 var i;
-for (i = 0; i <= 50; i++) {
+for (var i = 0; i <= 50; i++) {
     if (i === userInput) {
         console.log("Number to skip is: " + i);
         break;
