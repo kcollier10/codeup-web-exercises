@@ -13,19 +13,18 @@
 // Yay! I sold them all! // If there are no more cones
 
 var allCones = Math.floor(Math.random() * 50) + 50;
-var conesSold = Math.floor(Math.random() * 5) + 1;
+
 
 do {
-    if (allCones < conesSold) {
-        console.log("Sorry, I can't sell you " + conesSold + ", I only have " + allCones + " cones left!");
-    } else if (allCones > conesSold) {
-        console.log("You may buy some cones!");
-    } else {
+    var conesSold = Math.floor(Math.random() * 5) + 1;
+    alert("You are starting with " + allCones + ' cones.');
+    alert("You sold " + conesSold + " cones.");
+    if (allCones === 0) {
         console.log("Yay! I sold them all!");
+    } else if (conesSold > allCones) {
+        console.log("Sorry, I can't sell you " + conesSold + ", I only have " + allCones + " cones left!");
     }
-
-
-} while(allCones <= 50);
+} while(allCones > 0);
 
 //
 
