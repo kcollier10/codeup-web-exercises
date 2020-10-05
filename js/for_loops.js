@@ -1,30 +1,34 @@
 "use strict";
 
-function showMultiplicationTable(userInput) {
-    for(var i = 0; i <= 70; i++) {
+function showMultiplicationTable(input) {
+    for(var i = 1; i <= 70; i++) {
         if (i % 7 === 0) {
-            console.log();
+            console.log(input + " * " + (i/input) + " = " + i);
         }
     }
 }
 
 // for this problem above, ask about the console log portion!
-// answer:
+// specifically, do I need to console.log 10 times for the output to be correct?
+// I should be able to replace 'something'
 
 showMultiplicationTable(7);
 
 
 
 
-var randomNumber= Math.floor((Math.random() * (200 - 20 + 1)) + 20);
 
-for(i = 0; i <= 10; i++) {
+
+for(i = 1; i <= 10; i++) {
+    var randomNumber= Math.floor((Math.random() * (200 - 20 + 1)) + 20);
+
     if (randomNumber % 2 !== 0) {
         console.log(randomNumber + ' is odd.')
     } else {
         console.log(randomNumber + ' is even.')
     }
 }
+
 //for problem above, ask about how to log the 10 numbers without console.log-ing ten separate times
 // answer:
 
@@ -36,26 +40,38 @@ for(i = 0; i <= 10; i++) {
 //     i-=5;
 // }
 
-for(var i = 0; i > 0; i--){
+for(var i = 100; i >= 5; i--){
     if(i % 5 === 0) {
         console.log(i);
     }
 }
 
 
-function generatePyramid() {
-    var numberOfRows = 9;
-    var extraSpace = '';
+// function generatePyramid() {
+//     var numberOfRows = 9;
+//     var extraSpace = '';
+//
+//     for (var i = 1; i <= numberOfRows; i++) {
+//         for (var a = 1; a <= i; a++) {
+//             extraSpace += i + '';
+//         }
+//         console.log(extraSpace);
+//         extraSpace = '';
+//     }
+// }
+// generatePyramid();
 
-    for (var i = 1; i <= numberOfRows; i++) {
-        for (var a = 1; a <= i; a++) {
-            extraSpace += i + '';
-        }
-        console.log(extraSpace);
-        extraSpace = '';
-    }
+// take above example and simplify
+
+
+// need 9 rows
+
+var a = "";
+for (var i = 1; i < 10; i++){
+    a += 1;
+    console.log(a * i);
+
 }
-generatePyramid();
 
 
 
