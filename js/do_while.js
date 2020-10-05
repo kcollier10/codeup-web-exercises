@@ -17,8 +17,12 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 
 do {
     var conesSold = Math.floor(Math.random() * 5) + 1;
-    alert("You are starting with " + allCones + ' cones.');
-    alert("You sold " + conesSold + " cones.");
+
+    console.log(("You are starting with " + allCones + ' cones.'));
+    // include an equation for the cones you started with minus the ones you just sold
+    allCones -= conesSold;
+    console.log(("You sold " + conesSold + " cones."));
+
     if (allCones === 0) {
         console.log("Yay! I sold them all!");
     } else if (conesSold > allCones) {

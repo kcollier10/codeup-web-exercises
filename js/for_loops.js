@@ -56,6 +56,8 @@ function generatePyramid() {
 }
 generatePyramid();
 
+
+
 // for(i = 1; i <= 1; i++) {
 //     if (i === 1) {
 //         console.log();
