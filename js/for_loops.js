@@ -35,6 +35,7 @@ for(i = 0; i <= 10; i++) {
 //     console.log(i);
 //     i-=5;
 // }
+
 for(var i = 0; i > 0; i--){
     if(i % 5 === 0) {
         console.log(i);

@@ -16,11 +16,11 @@ var userInput = prompt("Please enter an odd number between 1 and 50.");
 //     }
 // }
 //
+
 for (var i = 0; i <= 50; i++) {
-    var numberToSkip = i;
-    if (userInput === numberToSkip) {
+
+    if (i == userInput) {
         console.log("Number to skip is: " + i);
-        break;
     } else if (i % 2 === 0) {
         continue;
     }
