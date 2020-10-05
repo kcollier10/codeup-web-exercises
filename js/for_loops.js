@@ -8,11 +8,12 @@ function showMultiplicationTable(input) {
     }
 }
 
-// for this problem above, ask about the console log portion!
-// specifically, do I need to console.log 10 times for the output to be correct?
-// I should be able to replace 'something'
-
 showMultiplicationTable(7);
+
+// for this problem above, ask about the console log portion!
+// specifically, do I need to console.log 10 times for the output to be correct? --> no
+// I should be able to replace 'something' --> ended up being (i/input)
+// can store an equation product in a variable
 
 
 
@@ -30,47 +31,40 @@ for(i = 1; i <= 10; i++) {
 }
 
 //for problem above, ask about how to log the 10 numbers without console.log-ing ten separate times
-// answer:
+// answer: put the random variable INSIDE the function, rather than out of it. If the random variable is outside, the loop will only use that once
 
 
-// var i = 100;
-//
-// while (i > 0) {
-//     console.log(i);
-//     i-=5;
-// }
 
-for(var i = 100; i >= 5; i--){
-    if(i % 5 === 0) {
-        console.log(i);
+
+function numberPyramid() {
+
+    for (var i = 1; i <= 9; i++) {
+         var extraSpace = '';
+        for (var j = 1; j <= i; j++) {
+            extraSpace += i + '';
+        }
+        console.log(extraSpace);
     }
 }
-
-
-// function generatePyramid() {
-//     var numberOfRows = 9;
-//     var extraSpace = '';
-//
-//     for (var i = 1; i <= numberOfRows; i++) {
-//         for (var a = 1; a <= i; a++) {
-//             extraSpace += i + '';
-//         }
-//         console.log(extraSpace);
-//         extraSpace = '';
-//     }
-// }
-// generatePyramid();
+numberPyramid();
 
 // take above example and simplify
 
 
 // need 9 rows
 
-var a = "";
-for (var i = 1; i < 10; i++){
-    a += 1;
-    console.log(a * i);
 
+for (var i = 1; i < 10; i++){
+    var j = "";
+    j += 1;
+    console.log(j * i);
+
+}
+
+// another possible solution:
+
+for(var i = 1; i <= 9; i++) {
+    console.log(i.toString().repeat(i));
 }
 
 
@@ -89,4 +83,22 @@ for (var i = 1; i < 10; i++){
 //         console.log(999999999);
 //     }
 // }
+
+
+// var i = 100;
+//
+// while (i > 0) {
+//     console.log(i);
+//     i-=5;
+// }
+
+for(var i = 100; i >= 5; i--){
+    if(i % 5 === 0) {
+        console.log(i);
+    }
+}
+
+for (var i = 100; i >= 5; i -=5) {
+    console.log(i);
+}
 

@@ -27,3 +27,31 @@ for (var i = 0; i <= 50; i++) {
     console.log("Here is an odd number: " + i);
 }
 //
+
+// DO-WHILE EXAMPLE
+
+do{
+    var userInput = Number(prompt("Enter a number."));
+
+    if (userInput < 1 || userInput > 50) {
+        alert("Number is invalid. Please try again.");
+    } else if (userInput % 2 === 0) {
+        alert(userInput + " is not odd, please try again.");
+    } else if (isNaN(userInput)) {
+        alert(userInput + " is not a number. Please try again!");
+    } else {
+        alert("Number is between 1-50. Thank you!");
+        break;
+    }
+} while(true);
+
+for (var i = 1; i <= 50; i++) {
+    if (i % 2 === 0) {
+        continue;
+    }
+    if (userInput === i) {
+        console.log("Yikes! Skipping number: " + i);
+    } else {
+        console.log("Here is an odd number: " + i);
+    }
+}
