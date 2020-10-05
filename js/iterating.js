@@ -63,6 +63,8 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    var array = [1, 2, 3, 4, 5];
+
     function first (array) {
         return array[0];
     }
