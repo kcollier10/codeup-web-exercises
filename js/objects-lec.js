@@ -160,6 +160,58 @@ myPhone.currentUser();
  * navigate through it.
  */
 
+var chooseYourFighter = [
+    {
+        name: {
+            firstName: "Spongebob",
+            lastName: "Squarepants"
+        },
+        catchphrase: function (){
+            return "I'm Ready!";
+        },
+        abilities: ["blow bubbles!!", "karate!!", "jellyfishing!!"]
+    },
+    {
+        name: {
+            firstName: "Patrick",
+            lastName: "Star"
+        },
+        catchphrase: function (){
+            return "No, this is Patrick.";
+        },
+        abilities: ["not construction", "rock hiding", "wumbo"]
+    },
+    {
+        name: {
+            firstName: "Eugene",
+            lastName: "Krabs"
+        },
+        catchphrase: function () {
+            return "Agagagagga";
+        },
+        abilities: ["money", "hide money", "tiny violin"]
+    },
+    {
+        name: {
+            firstName: "Squidward",
+            lastName: "Tentacles"
+        },
+        catchphrase: function () {
+            return "*nasal sounds*";
+        },
+        abilities: ["bad music", "bad art", "nag"]
+    }
+    ];
+
+chooseYourFighter.forEach(function(fighter){
+    console.log(fighter.name.firstName + ": " + fighter.catchphrase());
+    fighter.abilities.forEach(function(ability) {
+    console.log(ability);
+});
+console.log("------------");
+});
+
+
 
 /*********************************************
  *                  ARRAYS OF OBJECTS
