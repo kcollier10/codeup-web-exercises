@@ -30,6 +30,9 @@
     var namesList = planetsArray.join(" <br> ");
     console.log(namesList);
 
+    for (var i = 0; name = names[i]; i++) {
+        namesList +- "<li>" + name + "<li>";
+    }
 
 
 })();
