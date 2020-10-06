@@ -27,12 +27,23 @@
      * string, and <li> tags around each planet.
      */
 
-    var namesList = planetsArray.join(" <br> ");
-    console.log(namesList);
+    var planetsString = planetsArray.join("<br>");
+    console.log(planetsString);
 
-    for (var i = 0; name = names[i]; i++) {
-        namesList +- "<li>" + name + "<li>";
-    }
+    planetsArray = planetsString.split("<br>");
+
+    planetsString = planetsArray.join("</li><li>");
+    planetsArray = planetsString.split(" ");
+    planetsArray.unshift("<ul><li>");
+    planetsArray.push("</li></ul>");
+    planetsString = planetsArray.join("");
+    document.write(planetsString);
+
+    // for (var i = 0; name < namesList[i]; i++) {
+    //     namesList +- "<li>" + name + "<li>";
+    // }
+
+
 
 
 })();
