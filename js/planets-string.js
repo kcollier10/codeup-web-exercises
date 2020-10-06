@@ -12,8 +12,6 @@
      */
 
     var planetsArray = planetsString.split('|');
-
-
     console.log(planetsArray);
 
     /**
