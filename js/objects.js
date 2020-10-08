@@ -28,10 +28,10 @@
      */
 
     person.sayHello = function() {
-        alert("ARTHUR! WE NEED MORE MONEY!!1!!1!");
+        alert("ARTHUR! WE NEED MORE MONEY!!1!!1! -" + this.firstName + " " + this.lastName);
     }
 
-    console.log(person.sayHello);
+    person.sayHello();
 
 
     /** TODO:
@@ -55,13 +55,15 @@
     ];
 
     shoppers.forEach(function(shopper) {
-        if (amount > 200) {
-            return amount * (12/100);
+        console.log("Your amount, before discount, is: " + shopper.amount)
+        if (shopper.amount > 200) {
+            console.log("Your discount is: 12%");
+            console.log("Your new total is: " + (shopper.amount - (shopper.amount * (12/100))));
         }
 
-        console.log(shopper);
-
     });
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -75,6 +77,53 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
+    var books = [
+        {
+            title: ["The Hot Zone"]
+            ,
+            author: {
+                firstName: "Richard",
+                lastName: "Preston"
+            },
+        },
+        {
+            title: ["My Sister's Keeper"]
+            ,
+            author: {
+                firstName: "Jodi",
+                lastName: "Picoult"
+            },
+        },
+        {
+            title: ["Lord of the Rings"]
+            ,
+            author: {
+                firstName: "J.R.R.",
+                lastName: "Tolkien"
+            },
+        },
+        {
+            title: ["Lord of the Flies"]
+            ,
+            author: {
+                firstName: "William",
+                lastName: "Golding"
+            },
+        },
+        {
+            title: ["There's a Wocket in my Pocket"]
+            ,
+            author: {
+                firstName: "Dr.",
+                lastName: "Seuss"
+            },
+        }
+        ];
+
+    console.log(books);
+
 
     /**
      * TODO:
@@ -101,6 +150,12 @@
      *      ...
      */
 
+    books.forEach(function(book) {
+        console.log("Book # ");
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    })
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -111,5 +166,11 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author) {
+        return books;
+    }
+
+    console.log(createBook);;
 
 })();
