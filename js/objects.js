@@ -16,6 +16,8 @@
     person.firstName = "Dutch";
     person.lastName = "van der Linde";
     console.log(person);
+    console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -28,10 +30,13 @@
      */
 
     person.sayHello = function() {
-        alert("ARTHUR! WE NEED MORE MONEY!!1!!1! -" + this.firstName + " " + this.lastName);
+        return "ARTHUR! WE NEED MORE MONEY!!1!!1! -" + this.firstName + " " + this.lastName
     }
 
     person.sayHello();
+
+    alert(person.sayHello());
+    console.log(person.sayHello());
 
 
     /** TODO:
@@ -55,13 +60,18 @@
     ];
 
     shoppers.forEach(function(shopper) {
-        console.log("Your amount, before discount, is: " + shopper.amount)
+        var discount = shopper.amount * .12;
+        alert(shopper.name + "'s amount, before discount, is: " + shopper.amount)
         if (shopper.amount > 200) {
-            console.log("Your discount is: 12%");
-            console.log("Your new total is: " + (shopper.amount - (shopper.amount * (12/100))));
+            alert(shopper.name + "'s discount is: 12%");
+            alert(shopper.name + "'s new total is: " + (shopper.amount - (discount)));
+        } else {
+            alert(shopper.name + " did not spend enough to receive a discount.")
         }
 
     });
+
+    //'shopper' is an object
 
 
 
@@ -150,11 +160,14 @@
      *      ...
      */
 
-    books.forEach(function(book) {
-        console.log("Book # ");
-        console.log("Title: " + book.title);
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-    })
+    books.forEach(function(book, i) {
+        var output = "";
+        output += "Book # " + (i + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    });
 
     /**
      * Bonus:
@@ -167,10 +180,29 @@
      *   `showBookInfo` function.
      */
 
-    function createBook(title, author) {
-        return books;
+    function createBook(title, first, last) {
+        return {
+            title: title,
+            author: {
+                firstName: first,
+                lastName: last
+            }
+        };
     }
 
-    console.log(createBook);;
+    books.push(createBook("Black Creek Crossing", "John", "Saul"));
+    // books.push({});
+    // console.log(createBook());
+
+
+    function showBookInfo(book, i) {
+        var output = "";
+        output += "Book # " + (i + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    }
+    console.log(showBookInfo());
 
 })();
