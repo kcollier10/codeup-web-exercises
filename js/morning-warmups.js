@@ -28,12 +28,19 @@
      * Example Input: ['a', 'cat', 'BOb'];
      * Example Output: ['A', 'CAT', 'BOB'];
      */
-    function upCaseArr(arr) {
+    // function upCaseArr(arr) {
+    //
+    //     arr.forEach(function(element, index, array) {
+    //         element = element.toUpperCase();
+    //     });
+    //     return element;
+    // }
+    //
+    // console.log(upCaseArr(['a', 'cat', 'BOb'])); // should see ['A', 'CAT', 'BOB'] in the console when written correctly
 
-        arr.forEach(function(element, index, array) {
-            element = element.toUpperCase();
-        });
-        return element;
+
+    function trickOrTreat (input) {
+        return input.split(' ');
     }
 
-    console.log(upCaseArr(['a', 'cat', 'BOb'])); // should see ['A', 'CAT', 'BOB'] in the console when written correctly
+    console.log(trickOrTreat("Trick or Treat"));
