@@ -2,7 +2,7 @@
     "use strict";
 
     // create a circle object
-    var circle = {
+    let circle = {
         radius: 3,
 
         getArea: function () {
@@ -17,11 +17,12 @@
             }
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
+            // console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea(this.radius));
+
         }
-        // console.log("Area of a circle with radius: " + circle.radius + ", is: " + circle.getArea(circle.radius));
     };
 
-    // console.log("Area of a circle with radius: " + circle.radius + ", is: " + circle.getArea(circle.radius));
+    console.log("Area of a circle with radius: " + circle.radius + ", is: " + circle.getArea(circle.radius));
 
     // log info about the circle
     console.log("Raw circle information: " + (circle.getArea(circle.radius)));
