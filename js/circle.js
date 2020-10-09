@@ -13,7 +13,7 @@
             return area; // TODO: return the proper value
         },
 
-        logInfo: function () {
+        logInfo: function (isRounding) {
             // TODO: complete this method.
             if (circle.getArea % 2 === 0) {
                 return "Raw circle information: " + circle.getArea;
@@ -26,7 +26,7 @@
 
         }
     };
-    console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea);
+    console.log("Area of a circle with radius: " + circle.radius + ", is: " + circle.getArea);
 
     // log info about the circle
     console.log("Raw circle information");
