@@ -81,10 +81,13 @@ console.log(Math.sqrt(16));
 
 //Math.PI
 
+//3.14...
 
+console.log("Math.PI = " + Math.PI);
 
-// Math.E
+// used often in financial stuff
 
+console.log("Math.E = " + Math.E);
 
 
 
