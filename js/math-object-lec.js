@@ -89,9 +89,24 @@ console.log("Math.PI = " + Math.PI);
 
 console.log("Math.E = " + Math.E);
 
+// if we want to write scientific notation:
+// 4.58 x e^9
+console.log("The actual number represented by 4.58 X e^39 = " + Math.ceil(4.58*Math.pow(Math.E, 39)).toFixed(2));
+console.log("The actual number represented by 4.58 X e^39 = " + Math.floor(4.58*Math.pow(Math.E, 39)).toFixed(2));
+
+// 4.58 x 10^9
+
+console.log("The actual number represented by 4.58 X 10^9 = " + (4.58*Math.pow(10, 9)).toFixed(2));
+
+// toFixed will round
 
 
-
+// want between 2000 and 3000
+let randSelection = Math.random() * 2000 + 1000
+// min would be 0 + 1000 = 1000
+// max would be 2000 + 1000 = 3000
+// get a result => min < chosenNum < max
+                    // 2000 < chosenNum < 3000
 
 
 
