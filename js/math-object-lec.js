@@ -107,7 +107,16 @@ let randSelection = Math.random() * 2000 + 1000
 // max would be 2000 + 1000 = 3000
 // get a result => min < chosenNum < max
                     // 2000 < chosenNum < 3000
+// numberWithinRange = Math.random() * (MAX-MIN) + MIN
 
+// Pre-exercise warmup: Write a method to find a random number within a range of two numbers (min and a max)
+// HINT: Min and max should be passed into the method as parameters
+
+function ranNum (min, max) {
+    return Math.round(Math.random() * (max-min) + min);
+}
+
+console.log(ranNum(2000, 3000));
 
 
 
