@@ -1,0 +1,15 @@
+h3 {
+    color: black;
+}
+
+section {
+    background-color: lightskyblue;
+    border: black;
+    border-style: double;
+    padding: 10px;
+}
+
+body {
+    background-color: dimgrey;
+
+}
