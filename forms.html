@@ -42,73 +42,99 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register With Us</title>
+    <style>
+        h3 {
+            color: darkslateblue;
+        }
+
+        section {
+            background-color: darkgray;
+        }
+
+    </style>
 </head>
 <body>
+<header>
 
-<form method="POST" action="https://request-inspector.glitch.me/">
+</header>
+<main>
+    <section id="login">
+        <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ/">
 
-    <label for="username">Email</label>
-    <input id="username" name="username" type="text">
-    <br>
+            <label for="username">Email</label>
+            <input id="username" name="username" type="text" placeholder="Please enter email.">
+            <br>
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
-    <br>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Please enter password.">
+            <br>
 
-    <input type="submit">
-</form>
+            <input type="submit">
+        </form>
+    </section>
 <br>
 <hr>
 <br>
-<h3>Please enter a short bio:</h3>
-<form method="POST" action="https://request-inspector.glitch.me/">
-    <textarea name="user-bio"></textarea><br>
-    <input type="submit">
-</form>
-<br>
-<h3>How did you hear about us? Please select one (1) option:</h3>
-<form method="POST" action="https://request-inspector.glitch.me/">
-    <input type="radio" id="billboard" name="advertisement" value="billboard">
-    <label for="billboard">Billboard</label><br>
-    <input type="radio" id="radio-ad" name="advertisement" value="radio-ad">
-    <label for="radio-ad">Radio Advertisement</label><br>
-    <input type="radio" id="internet-ad" name="advertisement" value="internet-ad">
-    <label for="internet-ad">Internet Advertisement</label><br>
-    <input type="radio" id="other" name="advertisement" value="other">
-    <label for="other">Other</label>
+    <section id="aboutme">
+        <h3>Please enter a short bio:</h3>
+        <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ/">
+            <textarea name="user-bio" placeholder="Type a little bit about yourself!"></textarea><br>
+            <input type="submit">
+            </form>
+    </section>
     <br>
-    <input type="submit">
+    <section id="ads">
+        <h3>How did you hear about us? Please select one (1) option:</h3>
+        <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ">
+            <input type="radio" id="billboard" name="advertisement" value="billboard">
+            <label for="billboard">Billboard</label><br>
+            <input type="radio" id="radio-ad" name="advertisement" value="radio-ad">
+            <label for="radio-ad">Radio Advertisement</label><br>
+            <input type="radio" id="internet-ad" name="advertisement" value="internet-ad">
+            <label for="internet-ad">Internet Advertisement</label><br>
+            <input type="radio" id="other" name="advertisement" value="other">
+            <label for="other">Other</label>
+            <br>
+            <input type="submit">
 
-</form>
+        </form>
+    </section>
 
 <!--if the inputs are given different name attributes, more choice can be selected
 nothing happens if you leave off 'id' attribute-->
-<br>
-<h3>How did you hear about us? Please select one (1) option:</h3>
-<form method="POST" action="https://request-inspector.glitch.me/">
-    <input type="radio" id="billboard" name="ad-1" value="billboard">
-    <label for="billboard">Billboard</label><br>
-    <input type="radio" id="radio-ad" name="ad-2" value="radio-ad">
-    <label for="radio-ad">Radio Advertisement</label><br>
-    <input type="radio" id="internet-ad" name="ad-3" value="internet-ad">
-    <label for="internet-ad">Internet Advertisement</label><br>
-    <input type="radio" id="other" name="ad-4" value="other">
-    <label for="other">Other</label>
     <br>
-    <input type="submit">
-
-</form>
-<br>
-<form method="POST" action="https://request-inspector.glitch.me/">
-    <select name="browser-version">
-        <option value="chrome">Chrome</option>
-        <option value="firefox">Firefox</option>
-        <option value="internet-explorer">Internet Explorer</option>
-        <option value="safari">Safari</option>
-    </select>
+    <section id="ads2">
+        <h3>How did you hear about us? Please select one (1) option:</h3>
+        <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ">
+            <input type="radio" id="billboard" name="ad-1" value="billboard">
+            <label for="billboard">Billboard</label><br>
+            <input type="radio" id="radio-ad" name="ad-2" value="radio-ad">
+            <label for="radio-ad">Radio Advertisement</label><br>
+            <input type="radio" id="internet-ad" name="ad-3" value="internet-ad">
+            <label for="internet-ad">Internet Advertisement</label><br>
+            <input type="radio" id="other" name="ad-4" value="other">
+            <label for="other">Other</label>
+            <br>
+            <input type="submit">
+        </form>
+    </section>
     <br>
-    <input type="submit">
-</form>
+    <section id="browser">
+        <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ">
+            <select name="browser-version">
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="internet-explorer">Internet Explorer</option>
+                <option value="safari">Safari</option>
+            </select>
+            <br>
+            <input type="submit">
+        </form>
+    </section>
 
+</main>
+<footer>
+
+</footer>
 </body>
 </html>
