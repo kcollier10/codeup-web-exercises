@@ -41,26 +41,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/forms.css">
     <title>Register With Us</title>
-    <style>
-        h3 {
-            color: black;
-        }
 
-        section {
-            background-color: lightskyblue;
-            border: black;
-            border-style: double;
-            padding: 10px;
-        }
-
-        body {
-            background-color: dimgrey;
-
-        }
-
-
-    </style>
 </head>
 <body>
 <header>
@@ -78,7 +61,6 @@
             <input id="password" name="password" type="password" placeholder="Please enter password.">
             <br>
 
-            <input type="submit">
         </form>
     </section>
 
@@ -88,7 +70,6 @@
         <h3>Please enter a short bio:</h3>
         <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ/">
             <textarea name="user-bio" placeholder="Type a little bit about yourself!"></textarea><br>
-            <input type="submit">
             </form>
     </section>
     <hr>
@@ -105,7 +86,6 @@
             <label for="other">Other</label>
             <br>
             <br>
-            <input type="submit">
 
         </form>
     </section>
@@ -130,15 +110,16 @@ nothing happens if you leave off 'id' attribute-->
     <hr>
     <section id="browser">
         <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ">
+            <h3><label for="browser">Please choose your web browser:</label></h3><br>
             <select name="browser-version">
                 <option value="chrome">Chrome</option>
                 <option value="firefox">Firefox</option>
                 <option value="internet-explorer">Internet Explorer</option>
                 <option value="safari">Safari</option>
             </select>
-            <input type="submit">
         </form>
     </section>
+    <input type="submit">
 
 </main>
 <footer>
