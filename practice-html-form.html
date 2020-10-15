@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Example</title>
+</head>
+<body>
+
+    <main>
+
+        <h1>Form Example</h1>
+
+        <!-- submit a zip code -->
+        <form method="POST" action="https://hookb.in/OegGydZoN1snzzlke8aZ">
+            <input type="text" name="zip-code-1" placeholder="Enter zip code" id="zip-code-1" >
+            <input type="text" name="zip-code-2" placeholder="Enter zip code" id="zip-code-1" >
+            <input type="submit">
+<!--        or <button>Submit</button>-->
+        </form>
+        
+    </main>
+
+</body>
+</html>
+
+<!--FORMS ACTIVITY 2 (10 minutes)-->
+<!--Experiment with the provided forms example to answer the following:-->
+<!-- - What happens when no form action or method is provided?-->
+<!--the form will not submit-->
+<!-- - What does the output look like in Hookbin between GET and POST requests?-->
+<!--input is inside query string with GET, input is inside body with POST-->
+<!-- - What happens if the input is blank?-->
+<!--still submits, but key does not have a value-->
+<!-- - What happens if the name attribute is removed?-->
+<!--cannot see key any longer (no zip-code on hookbin)-->
+<!-- - What happens if additional text inputs are added with the same name value as the existing input?-->
+<!--zip-code now has 2 values-->
+<!-- - What happens if additional text inputs are added with different name values?-->
+<!--inputs are saved in two separate variables-->
+<!--in POST, values are still not in query string with these examples as well-->
