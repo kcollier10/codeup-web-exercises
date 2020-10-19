@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --blue: #CDDEFF;
+    --text-info: #514EA5;
+
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -13,28 +19,34 @@ body, html {
 }
 
 .message {
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    /*border: 3px lightgrey;*/
-    margin: 10px;
+    margin: 10px auto;
     border: solid 1px lightgrey;
     opacity: .8;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .message-info {
-    background: lightskyblue;
+    background: #CDDEFF;
+    color: darkblue;
     /*border: solid lightgrey;*/
+    /* OR */
+    /*background: var(--blue);*/
+    /*color: var(--text-info);*/
 }
 
 .message-success {
     background: lightgreen;
+    color: darkgreen;
 }
 
 .message-warning {
     background: lightyellow;
+    color: darkgoldenrod;
 }
 
 .message-error {
     background: palevioletred;
+    color: darkred;
 }
