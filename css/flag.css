@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.section {
+    margin: 0;
+    padding: 0;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -16,38 +21,35 @@ body, html {
     width: 30%;
     background: blue;
     height: 500px;
-    clear: left;
-    position: fixed;
     padding: 0;
     border-top: solid 1px black;
     border-left: solid 1px black;
     border-bottom: solid 1px black;
+    display: inline-flex;
 }
 
-.image {
-    position: absolute;
-    display: flex;
-}
+/*.image {*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*}*/
 
 .white {
-    width: 60%;
+    width: 600px;
     height: 250px;
     background: white;
     border-top: solid 1px black;
     border-right: solid 1px black;
-    float: right;
-    position: relative;
     padding: 0;
+    display: inline-flex;
 }
 
 .red {
-    width: 60%;
+    width: 600px;
     height: 250px;
     background: red;
     border-bottom: solid 1px black;
     border-right: solid 1px black;
-    float: right;
-    position: relative;
     padding: 0;
+    display: inline-flex;
 }
 
