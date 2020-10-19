@@ -1,0 +1,1 @@
+use file for light js for welcome.html
