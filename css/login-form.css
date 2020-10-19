@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 body, html {
@@ -25,7 +25,7 @@ fieldset {
     /* There must be 1em between the content and the border of this element */
     padding: 1em;
     /* It should have no border */
-    border: 0px;
+    border: 0;
     /* Its background should be white */
     background: white;
 }
@@ -57,7 +57,7 @@ fieldset {
 
 .btn {
     /* There must be a separation of 8px between the text and the border of this element */
-    padding: 20px;
+    padding: 8px;
     /* The text color of this element should be white and bold */
     color: white;
     font-weight: bold;
@@ -77,7 +77,8 @@ fieldset {
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+    /*width: calc(100% - 8px);*/
+    width: calc(100% - 4px);
 }
 
 
