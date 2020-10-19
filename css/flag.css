@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.blue {
+    width: 30%;
+    background: blue;
+    height: 500px;
+    clear: left;
+    position: fixed;
+    padding: 0;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.image {
+    position: absolute;
+    display: flex;
+}
+
+.white {
+    width: 60%;
+    height: 250px;
+    background: white;
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    float: right;
+    position: relative;
+    padding: 0;
+}
+
+.red {
+    width: 60%;
+    height: 250px;
+    background: red;
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
+    float: right;
+    position: relative;
+    padding: 0;
+}
+
