@@ -21,7 +21,7 @@ header {
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
-    /*position: relative;*/
+    position: relative;
 }
 a {
     color: var(--link-color);
@@ -31,14 +31,11 @@ a {
     padding: 1.5em;
 }
 
-.profile {
-    position: relative;
 
-}
 .profile-image {
     position: absolute;
-    bottom: 5px;
-    z-index: 1;
+    top: calc(275px - 80px);
+    /*z-index: 1;*/
 }
 .top-nav {
     background: var(--light-bg);
@@ -100,20 +97,26 @@ a {
     float: left;
     width: calc(50% - 1em);
     margin: 0 .5em;
+    background: var(--light-bg);
+    border-bottom: 1px var(--separator-color);
+    padding: .5em;
 }
 
 .who-to-follow {
     float: right;
     width: calc(25% - 1em);
     margin: 0 .5em;
+    background: var(--light-bg);
+    border-bottom: 1px var(--separator-color);
+    padding: .5em;
 }
 
 .media {
     width: 100%;
-    background: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
-    padding: .5em;
-    overflow: visible;
+    /*background: var(--light-bg);*/
+    /*border-bottom: 1px var(--separator-color);*/
+    /*padding: .5em;*/
+    overflow: auto;
 }
 
 .media-image {
