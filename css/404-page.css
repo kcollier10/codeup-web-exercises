@@ -1,0 +1,45 @@
+
+* {
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.top-nav {
+    width: 100%;
+}
+.nav-item {
+    display: inline-block;
+    float: right;
+    position: relative;
+    padding: 1em;
+}
+.nav {
+    list-style-type: none;
+    padding: 1em;
+    margin: 1em;
+    /*line-height: 2em;*/
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo {
+    width: auto;
+    height: 30px;
+    float: left;
+    padding: .5em;
+}
+
+.divider {
+    position: absolute;
+    padding: 0 1em;
+}
