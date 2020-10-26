@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* selector for id="container" */
 #container {
     margin: 50px auto;

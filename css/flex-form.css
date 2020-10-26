@@ -43,10 +43,11 @@ body {
     /*align-items: center;*/
 }
 
-.flex-form > * {
+.flex-form>* {
     border: 0;
     padding: 10px;
     background: white;
+    opacity: .9;
     line-height: 50px;
     font-size: 20px;
     border-radius: 0;
