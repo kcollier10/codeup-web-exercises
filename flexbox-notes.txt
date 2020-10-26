@@ -1,0 +1,49 @@
+FLEXBOX
+Good for positioning elements with individual components
+
+Parent container is called the Flex Container
+
+Activate flex box with display: flex in parent container
+Default is items lining up one after the other
+
+Spacing between items in main axis
+
+When in column layout, main axis is up and down
+-makes sense because you can control spacing between items in a drop down list
+
+FLEX CONTAINER PROPERTIES:
+
+Flex-direction: row - changes to rows
+Flex-direction: row-reverse - turns items around, still in row
+Flex-direction: column - changes to columns
+flex-direction: column-reverse - items bottom to top, still in column
+CROSS-AXIS
+
+Justify-content: flex-start - puts contents on left
+Justify-content: flex-end - aligns items along end of line
+Justify-content: space-between: stretches along whole line
+Justify-content: space-around - 50% of the space bat beginning and end; if you add those values, they will equal space between the items
+Justify-content: space-evenly - take the same amount of empty space at beginning/end as it does with every item
+Justify-content: center - centers items; no space between content, even space at top-bottom/left-right
+MAIN-AXIS
+
+Align-items is used to set to position of items along the cross axis; parent container must have a greater height than the items
+
+Align-items: flex-start - places items at ‘top’ of container
+Align-items: flex-end - places items at ‘bottom’ of container
+Align-items: stretch - default, goes from ‘top’ of container to ‘bottom’
+Align-items: center - centers items along cross axis
+Align-items: baseline
+
+Flex-wrap: nowrap:
+Flex-wrap: wrap - puts items on different lines
+flex-wrap: wrap-reverse - turns items around on different lines
+
+Align-content is for multiple rows/columns, create space between rows, not between items; CROSS AXIS
+
+FLEX ITEM PROPERTIES:
+
+Order: the first flex item has an order value of 1
+	    the last flex item has an order value of 2
+Flex-grow: will fill container; default is 0, if set to 0 it cannot stretch beyond normal size
+As numbers go up, more proportions are taken (weighted)
