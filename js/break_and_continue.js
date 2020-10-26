@@ -17,21 +17,21 @@ var userInput = prompt("Please enter an odd number between 1 and 50.");
 // }
 //
 
-for (var i = 0; i <= 50; i++) {
-
-    if (i == userInput) {
-        console.log("Number to skip is: " + i);
-    } else if (i % 2 === 0) {
-        continue;
-    }
-    console.log("Here is an odd number: " + i);
-}
+// for (var i = 0; i <= 50; i++) {
+//
+//     if (i == userInput) {
+//         console.log("Number to skip is: " + i);
+//     } else if (i % 2 === 0) {
+//         continue;
+//     }
+//     console.log("Here is an odd number: " + i);
+// }
 //
 
 // DO-WHILE EXAMPLE
 
 do{
-    var userInput = Number(prompt("Enter a number."));
+    var userInput = Number(prompt("Enter an odd number."));
 
     if (userInput < 1 || userInput > 50) {
         alert("Number is invalid. Please try again.");
@@ -44,6 +44,8 @@ do{
         break;
     }
 } while(true);
+
+// FOR LOOP EXAMPLE
 
 for (var i = 1; i <= 50; i++) {
     if (i % 2 === 0) {
