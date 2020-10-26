@@ -1,0 +1,40 @@
+MEDIA QUERIES
+
+The default pixel ratio depends on the display density. On a display with density less than 200dpi, the ratio is 1.0. On displays with density between 200 and 300dpi, the ratio is 1.5. For displays with density over 300dpi, the ratio is the integer floor(density/150dpi). Note that the default ratio is true only when the viewport scale equals 1. Otherwise, the relationship between CSS pixels and device pixels depends on the current zoom level.
+
+—Layouts—
+Fixed: fixed width with pixel values, size of elements stay the same despite changes to screen size; continuously being moved away from; cuts off text, user will have to scroll top to bottom and left to right to see content
+Fluid: widths are assigned by percentages rather than pixel values; proportion of elements will stay the same when screen changes size; on smaller screens, some elements will get too narrow
+Responsive: more flexibility, utilizes breakpoints (certain screen sizes) to customize layout based on screen, requires testing of each media query; provides more customized experience for the user
+
+—Viewport in HTML—
+-user’s visible area of webpage
+-HTML5 has <meta> tag to take control of viewport:
+	<head>
+		<meta name=“viewport” content=“width=device-width, initial-scale=1”>
+	</head>
+-without the viewport meta tag, the content will shrink
+-we want the content to increase in size as the screen size decreases
+
+—Media Queries in the CSS—
+-allow us to target CSS based on pixel width of the viewable area, and make changes based on those dimensions
+-example for screen sizes 500px and UP:
+@media screen and (min-width:500px) {
+	selector {
+		property: value;
+	}
+}
+-example for screen sizes between 960px and 1200px:
+@media screen and (min-width:960px) and (max-width:1200px) {
+	selector {
+		property: value;
+	}
+}
+
+—Breakpoints—
+-certain screen size that corresponds to type of screen (phone, tablet, landscape versions of phone and tablet, smaller desktop, larger desktop
+-called breakpoints because they traditionally break and position the major layout elements
+
+—Mobile-First Approach—
+-writing your default styling for a mobile device, then using media queries to change layout based on larger devices
+
