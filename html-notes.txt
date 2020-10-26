@@ -1,0 +1,140 @@
+# HTML Forms Pre Lesson
+1. What HTTP methods can we use in forms?
+GET - requests information WITHOUT changing data on the server
+POST - makes a change to the existing data
+
+2. What happens if we do not specify a method?
+The GET method can be used
+
+3. What is a `GET` method?
+Should never be used with sensitive data, only used to request/GET data; DO save in the browser history; can be bookmarked
+
+4. What is a `POST` method?
+Used to send data to a server to create/update a resource; cannot be bookmarked; post requests do not remain in the browser history
+
+5. What is the `action` attribute used for?
+Refers to the location the data should be sent; if no action is specified, the action will be set to send data back to the Curren URL
+
+6. What is a `query string`?
+Composed of key-value pairs; when you use the GET method, the form inputs will be appended to the URL; if you are using POST, inputs will be sent as a query string (no question mark add) in the body of the HTTP request
+
+7. How are query strings structured?
+?key1=value1&key2=value2&key3=value3
+
+8. How do we submit a form?
+Form needs a button or input element with a type attribute with the value ‘submit’; inputs are void elements
+
+9. What are some common form input elements?
+Text inputs (username/passwords)
+Text areas (user input like bio)
+Checkboxes (multiple answer questions)
+Radio buttons (multiple choice questions)
+Selects (drop down menus)
+Hidden inputs (for backend of applications; sends data with form that user does no specify or modify)
+
+10. How can we use name and value attributes?
+In order for input to be submitted, we must give it a name attribute. The value of the name attribute will become the name of the key that corresponds to the value of the current input
+
+11. How do you disable an input?
+Put ‘disabled’ inside the tags (<option disabled value=“n”> or <input type=“text” value=“Codeup” disabled>
+
+12. How do you hide an input?
+Input type = “hidden”
+
+13. What are `labels` used for?
+Bonus
+* Describe the following:
+  *   Text Inputs
+  *   Text Areas
+  *   Checkbox and Radio Buttons
+  *   Selects
+
+
+—————————————————————————————— 
+-- Learning Objectives for Forms Lesson
+
+Describe what an HTML form is and what HTTP methods are
+An HTML form is a way to take inputs from a user and perform some action based upon them
+
+Define the use of action and method form attributes
+
+Identify the differences and appropriate use cases for GET and POST requests
+
+Identify three ways a user can send a GET request in a browser viewing an HTML page
+
+Identify the purpose and meaning of a query string
+
+Fluently write common HTML input elements, attributes and labels using correct syntax.
+
+Select the most appropriate input type based on the needed data from a user
+
+————————————————————————————————————————
+
+
+FORMS ACTIVITY 1 (10 minutes)
+
+Consider the appropriate HTTP method (GET or POST) for the following user actions:
+
+- A user navigates to https://google.com in their browser
+GET
+- A user clicks on the view more button on an E-Commerce site
+POST
+- A user logs in to a web application
+POST
+- A user upvotes a YouTube video
+POST
+- A user deletes a comment
+POST
+- A user searches for “Codeup” in Google
+GET
+- A user is redirected to the home page after logging out of an application
+GET
+- A user adds an item to a shopping cart on Amazon
+POST
+- A user re-sorts search engine results to display most recent to least recent results
+GET
+- A user clicks “not interested” on a house listing in a real estate app
+POST
+
+What are some other GET/POST actions you have experienced on the web?
+
+—————————————————————————————————
+
+FORMS ACTIVITY 3 (optional if you have time)
+
+What input type would you choose for each piece of data to get from a user?
+
+- an address
+- feedback on a survey
+- the age of a person
+- the amount of a payment
+- a password
+- a background color preference
+- a car make and model selection
+- eye color
+- if a user prefers to have emailed invoices
+- the model year of a car
+- date of birth
+
+Conduct a peer review and answer the following questions about HTML forms:
+
+- What control is used to make a single choice from a list of mutually exclusive choices?
+- What is used to select one, more than one, or no choices from a list of choices?
+- What do you call a field for the input of a single line of text?
+- A field for the input of a single line of text, in which characters entered appear as bullets or asterisks?
+- This element represents a document section that contains interactive controls for submitting information to a web server.
+
+———————————————————————————————————————————————————————
+
+
+Conduct a peer review and answer the following questions about HTML forms:
+
+- What control is used to make a single choice from a list of mutually exclusive choices? RADIO
+- What is used to select one, more than one, or no choices from a list of choices? CHECKBOX
+- What do you call a field for the input of a single line of text? TEXTBOX
+- A field for the input of a single line of text, in which characters entered appear as bullets or asterisks? PASSWORD
+- This element represents a document section that contains interactive controls for submitting information to a web <FORM>
+
+———————————————————————————————————————————————————————
+
+
