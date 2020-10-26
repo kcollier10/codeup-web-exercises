@@ -1,0 +1,28 @@
+Difference between inline and block element:
+Inline elements do not force a new line to begin in the document flow
+Block - div
+Inline -span
+
+Float: provides the ability for the element to break free from the normal document flow and shift to the left or right as far as possible
+
+The default value for elements is static
+
+The clear property sets whether an element must be moved below floating elements that precede it; applies to floating and non-floating elements
+
+
+static:
+ Default positioning, positioned according to natural flow of the document, top, right, bottom, and left have NO EFFECT
+
+Relative:
+
+
+Absolute:
+
+Fixed: removed from natural document flow
+
+
+Divs will overlap, text and inline elements will move up
+<p> is text, so it will have ability to wrap around flatted elements
+
+Clear - will not wrap around elements in the specified direction
+Clear: right; = Clear anything floated to the right
