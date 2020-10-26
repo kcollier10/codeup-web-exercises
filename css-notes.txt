@@ -1,0 +1,137 @@
+===== CSS PROPERTY EXPLORATION ACTIVITY
+
+A list of questions for each breakout room is listed below.
+
+Decide as a group how to best divide up your breakout room questions between group members.
+Individuals/groups of team members will then research answers to a question and prepare coding
+examples (where applicable) to best illustrate the topic/answer.
+
+Some questions are harder than others so if you finish early, assist other group members with answering additional/harder questions.
+
+Collaborate with your group and share with each other what you found in researching your questions.
+
+Designate one or two presenters in the group to present the findings of the group to the class.
+
+If your group finishes early, feel free to help out other groups.
+
+We will begin group presentations at 3:00PM.
+
+Aim to present for around 5 minutes or less and expect questions.
+
+
+
+===== GROUP 1 - Specificity (CAPTAIN AMERICA)
+
+Specificity https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+Using the curriculum and above article as a reference, create examples to demo the specificity of the following in the correct order:
+Elements, classes, then id
+
+  classes - <class=“”> declared with . In the front
+  elements - <p> <div>
+  ids - starts with #
+
+If element and ID, are both defined, id will take precedence
+
+  !important - used to override; edge case
+
+  order of CSS declarations
+
+  inline styling
+  selector combinations
+
+
+What does the “Cascading” mean in “Cascading Style Sheets”?
+
+
+
+===== GROUP 2 - Color Properties (IRON MAN)
+Prepare code examples to present answers to the following questions:
+
+  How does hexadecimal color coding work?
+Base 16 color system; 3-digits or 6-digits
+
+  Why use CSS color names over hex values and vice versa?
+Color names are simpler and take less space
+
+  Why use rgb to define a CSS color vs. a hex value?
+Using rob, you have the option for defining opacity
+
+  What is the difference between 3 digit hex values and 6?
+Three is only good if the values are the same
+
+  ‘background’ and ‘background-color’ properties can produce the same output; why is this possible?
+Background is shorthand for background-color
+
+  What is the ‘a’ in rgba?
+Alpha channel; indicates opacity/opaqueness of particular color (range is 0.0-1.0)
+
+  What is the ‘Digital Color Meter’ on a Mac? How is the helpful?
+Tells you the color value in hex or RGB
+
+  BONUS (if time)
+
+    What are CSS gradients?
+Display smooth transitions between two colors
+Liner - goes up/down/left/right/diagonal
+Radial - defined by center
+
+
+
+===== GROUP 3 - Text and Font Properties 1 (BLACK WIDOW)
+Prepare code examples to present answers to the following questions:
+
+  What is a font stack and how should the best one be chosen?
+Based on webpage and preference
+
+  What is the difference between serif and sans serif font?
+Serif has small flourishes and takes longer to load, sans serif used more widely on the web
+Sans is Latin for without
+
+  How can a developer use a Google font?
+Search google fonts on google
+
+  How can a developer figure out what font is being used on a given web page?
+
+
+
+===== GROUP 4 - Text and Font Properties 2 (HAWKEYE)
+Prepare code examples to present answers to the following questions:
+
+  What is a websafe font?
+Fonts included with most operating systems
+
+  What is the difference between using pixels, ems, and rems?
+One em=16pt font size
+
+  How can the space between letters in CSS be controlled?
+
+  How can the case of letters be changed purely with CSS?
+Text-transform; capitalize, lowercase, uppercase, none, inherit
+
+
+===== GROUP 5 - Other Properties 1 (THOR)
+Prepare code examples to present answers to the following questions:
+
+  How does the unset CSS property work?
+
+  How does the inherit property work?
+
+  How can CSS transform rotate or change the size of a displayed element?
+
+  How do CSS transitions work (focus on a simple example)?
+
+
+
+===== GROUP 6 - Other Properties 2 (SCARLET WITCH)
+Prepare code examples to present answers to the following questions:
+
+  How do CSS animations work (focus on a simple example)?
+
+  What is the difference between display: none and display: hidden?
+
+  When using and image and css folder in a project, why is the path to a background image in a stylesheet different than the path to the same image in an image tag?
+
+  BONUS (if time)
+
+    How can a background image be faded so that elements in the foreground are clearly visible? (edited) 
