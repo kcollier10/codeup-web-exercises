@@ -1,0 +1,29 @@
+.jumbotron-fluid {
+    background: url("../img/pizza1.jpeg");
+    width:100%
+}
+
+.welcome-header {
+    background: white;
+    opacity: .6;
+    text-align: center;
+}
+.container {
+    border: 1px gray;
+}
+
+/*.navbar {*/
+/*    display: block;*/
+/*}*/
+
+/*.navbar>li {*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.navbar>li:nth-child(3) {*/
+/*    float: right;*/
+/*}*/
+
+.card-header {
+    background: white;
+}
