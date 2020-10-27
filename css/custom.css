@@ -1,0 +1,11 @@
+.jumbotron-fluid {
+    background: url("../img/pizza1.jpeg");
+    max-height: 600px;
+}
+
+.welcome-header {
+    background: white;
+    opacity: .6;
+    text-align: center;
+}
+
