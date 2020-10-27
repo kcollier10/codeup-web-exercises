@@ -1,6 +1,6 @@
 .jumbotron-fluid {
     background: url("../img/pizza1.jpeg");
-    max-height: 600px;
+    width:100%
 }
 
 .welcome-header {
@@ -8,4 +8,19 @@
     opacity: .6;
     text-align: center;
 }
+.container {
+    border: 1px gray;
+}
+
+/*.navbar {*/
+/*    display: block;*/
+/*}*/
+
+/*.navbar>li {*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.navbar>li:nth-child(3) {*/
+/*    float: right;*/
+/*}*/
 

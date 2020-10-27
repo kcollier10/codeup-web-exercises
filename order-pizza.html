@@ -10,42 +10,160 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="welcome-header">
-            <h1 class="pizza-world">Welcome to Pizza World!</h1>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Pizza World!</a>
+        <div class="nav-bar">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#">Order Online</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
+            </ul>
         </div>
-    </div>
-    <hr>
-    <div class="nav-bar">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-<!--                <span class="w3-badge">1</span>-->
-                <a class="nav-link active" href="#"><span class="w3-badge">&#x2776;</span>Size and Crust</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="w3-badge">&#x2777;</span>Cheese and Sauce</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="w3-badge">&#x2778;</span>Toppings</a>
-            </li>
-        </ul>
-        <div class="card" style="width: 100%;">
-            <div class="card-header">
-                Hand Tossed
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+        </form>
+
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="welcome-header">
+                <h1 class="pizza-world">Welcome to Pizza World!</h1>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
-                <ul class="list-group"></ul>
+        </div>
+
+        <!--maybe add wrap around everything? -->
+        <hr>
+        <!-- 1 2 3 OPTIONS -->
+
+        <div class="nav-bar">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><span class="w3-badge">&#x2776;</span>Size and Crust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="w3-badge">&#x2777;</span>Cheese and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="w3-badge">&#x2778;</span>Toppings</a>
+                </li>
             </ul>
         </div>
 
+        <!-- SIZE AND CRUST -->
+
+        <div class="container-fluid cheese">
+            <div class="card-header bg-primary">
+                Choose size and crust
+            </div>
+            <div class="container-fluid crust">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <div class="card-header">
+                        Garlic seasoned crust wth a rich, buttery taste.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Small (10")</li>
+                        <li class="list-group-item">Medium (12")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid crust">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <div class="card-header">
+                        Thin enough for optimum crispy to crunch ratio.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Medium (12")</li>
+                        <li class="list-group-item">Large (14")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHEESE AND SAUCE -->
+
+        <div class="container-fluid cheese">
+            <div class="card-header bg-primary">
+                Choose size and crust
+            </div>
+            <div class="container-fluid crust">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <div class="card-header">
+                        Garlic seasoned crust wth a rich, buttery taste.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Small (10")</li>
+                        <li class="list-group-item">Medium (12")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid crust">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <div class="card-header">
+                        Thin enough for optimum crispy to crunch ratio.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Medium (12")</li>
+                        <li class="list-group-item">Large (14")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOPPINGS -->
+
+        <div class="container-fluid cheese">
+            <div class="card-header bg-primary">
+                Choose size and crust
+            </div>
+            <div class="container-fluid crust">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <div class="card-header">
+                        Garlic seasoned crust wth a rich, buttery taste.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Small (10")</li>
+                        <li class="list-group-item">Medium (12")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid crust">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <div class="card-header">
+                        Thin enough for optimum crispy to crunch ratio.
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Medium (12")</li>
+                        <li class="list-group-item">Large (14")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
-<header>
-
-</header>
-
-<main>
-
 </main>
 
 <footer>
