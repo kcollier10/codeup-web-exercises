@@ -40,135 +40,191 @@
         <!-- 1 2 3 OPTIONS -->
 
         <div class="nav-bar">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><span class="w3-badge">&#x2776;</span>Size and Crust</a>
+                    <a class="nav-link active" id="size-tab" role="tab" data-toggle="tab" href="#size" aria-controls="size" aria-selected="true"><span class="w3-badge">&#x2776;</span>Size and Crust</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="w3-badge">&#x2777;</span>Cheese and Sauce</a>
+                    <a class="nav-link" id="cheese-sauce-tab" role="tab" data-toggle="tab" href="#cheese-sauce" aria-controls="cheese-sauce" aria-selected="false"><span class="w3-badge">&#x2777;</span>Cheese and Sauce</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="w3-badge">&#x2778;</span>Toppings</a>
+                    <a class="nav-link" id="toppings-tab" role="tab" data-toggle="tab" href="#toppings" aria-controls="toppings" aria-selected="false"><span class="w3-badge">&#x2778;</span>Toppings</a>
                 </li>
             </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="size" role="tabpanel" aria-labelledby="size-tab"></div>
+                <div class="tab-pane" id="cheese-sauce" role="tabpanel" aria-labelledby="cheese-sauce-tab"></div>
+                <div class="tab-pane" id="toppings" role="tabpanel" aria-labelledby="toppings-tab"></div>
+
+                </div>
+            </div>
         </div>
 
         <!-- SIZE AND CRUST -->
 
-        <div class="container-fluid cheese">
+        <div class="container-fluid crust">
             <div class="card-header bg-primary">
                 Choose size and crust
             </div>
-            <div class="container-fluid crust">
+            <div class="container-fluid hand-tossed">
                 <div class="card" style="width: 100%;">
                     <div class="card-header">
                         Hand Tossed
                     </div>
-                    <div class="card-header">
-                        Garlic seasoned crust wth a rich, buttery taste.
+                    <div class="card-header bg-white">
+                        <p>Garlic seasoned crust wth a rich, buttery taste.</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Small (10")</li>
-                        <li class="list-group-item">Medium (12")</li>
-                    </ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="small" value="small">
+                            <label class="form-check-label" for="small">Small (10")</label>
+                            <input class="form-check-input" type="radio" id="medium-hand-tossed" value="small">
+                            <label class="form-check-label" for="medium-hand-tossed">Medium (12")</label>
+                        </div>
                 </div>
             </div>
-            <div class="container-fluid crust">
+            <div class="container-fluid crunchy">
                 <div class="card" style="width: 100%;">
                     <div class="card-header">
                         Crispy Thin
                     </div>
-                    <div class="card-header">
-                        Thin enough for optimum crispy to crunch ratio.
+                    <div class="card-header bg-white">
+                        <p>Thin enough for optimum crispy to crunch ratio.</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Medium (12")</li>
-                        <li class="list-group-item">Large (14")</li>
-                    </ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="medium-crunchy" value="small">
+                            <label class="form-check-label" for="medium-crunchy">Medium (12")</label>
+                            <input class="form-check-input" type="radio" id="large" value="small">
+                            <label class="form-check-label" for="large">Large (14")</label>
+                        </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button type="submit">Next Step ></button>
                 </div>
             </div>
         </div>
 
         <!-- CHEESE AND SAUCE -->
 
-        <div class="container-fluid cheese">
+        <div class="container-fluid cheese-sauce">
             <div class="card-header bg-primary">
-                Choose size and crust
+                Choose cheese and sauce
             </div>
-            <div class="container-fluid crust">
+            <div class="container-fluid cheese">
                 <div class="card" style="width: 100%;">
                     <div class="card-header">
-                        Hand Tossed
+                        Cheese
                     </div>
-                    <div class="card-header">
-                        Garlic seasoned crust wth a rich, buttery taste.
+                    <div class="form-group">
+                        <label for="cheese-amount">How much?</label>
+                        <select class="form-control" id="cheese-amount">
+                            <option>None</option>
+                            <option>Normal</option>
+                            <option>ALL OF IT</option>
+                        </select>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Small (10")</li>
-                        <li class="list-group-item">Medium (12")</li>
-                    </ul>
                 </div>
             </div>
-            <div class="container-fluid crust">
+            <div class="container-fluid sauce">
                 <div class="card" style="width: 100%;">
                     <div class="card-header">
-                        Crispy Thin
+                        Sauce
                     </div>
-                    <div class="card-header">
-                        Thin enough for optimum crispy to crunch ratio.
+                    <div class="form-group">
+                        <label for="sauce-type">What kind?</label>
+                        <select class="form-control" id="sauce-type">
+                            <option>Marinara</option>
+                            <option>Alfredo</option>
+                            <option>Placeholder</option>
+                            <option>Placeholder</option>
+                            <option>Placeholder</option>
+                        </select>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Medium (12")</li>
-                        <li class="list-group-item">Large (14")</li>
-                    </ul>
+                    <div class="form-group">
+                    <label for="sauce-amount">How much?</label>
+                    <select class="form-control" id="sauce-amount">
+                        <option>None</option>
+                        <option>A little</option>
+                        <option>Average</option>
+                        <option>A lot</option>
+                        <option selected>All of it</option>
+                    </select>
+                </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button type="submit">< Previous Step></button>
+                    <button type="submit">Next Step ></button>
                 </div>
             </div>
         </div>
 
         <!-- TOPPINGS -->
 
-        <div class="container-fluid cheese">
+        <div class="container-fluid toppings">
             <div class="card-header bg-primary">
-                Choose size and crust
+                Choose toppings
             </div>
-            <div class="container-fluid crust">
+            <div class="container-fluid toppings-meats">
                 <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        Hand Tossed
+                    <div class="card-header meats">
+                        Choose meats:
                     </div>
-                    <div class="card-header">
-                        Garlic seasoned crust wth a rich, buttery taste.
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Small (10")</li>
-                        <li class="list-group-item">Medium (12")</li>
-                    </ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="beef">
+                            <label class="form-check-label" for="beef">Beef</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="ham">
+                            <label class="form-check-label" for="ham">Ham</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="philly-steak">
+                            <label class="form-check-label" for="philly-steak">Philly Steak</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="bacon">
+                            <label class="form-check-label" for="bacon">Bacon</label>
+                        </div>
+<!--                    </div>-->
                 </div>
             </div>
-            <div class="container-fluid crust">
+            <div class="container-fluid toppings-non-meat">
                 <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        Crispy Thin
+                    <div class="card-header non-meats">
+                        Choose Non-Meats:
                     </div>
-                    <div class="card-header">
-                        Thin enough for optimum crispy to crunch ratio.
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Medium (12")</li>
-                        <li class="list-group-item">Large (14")</li>
-                    </ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="green-peppers">
+                            <label class="form-check-label" for="green-peppers">Green Peppers</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="mushrooms">
+                            <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="onions">
+                            <label class="form-check-label" for="onions">Onions</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="jalapenos">
+                            <label class="form-check-label" for="jalapenos">Jalapeño Peppers</label>
+                        </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button type="submit">Checkout</button>
                 </div>
             </div>
         </div>
 
-
-
-    </div>
 </main>
 
 <footer>
 
 </footer>
+<script src="js/order-pizza.js">
+    $(function () {
+        $('#myTab li:last-child a').tab('show')
+    })
+</script>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
