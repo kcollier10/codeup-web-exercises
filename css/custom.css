@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .jumbotron-fluid {
     background: url("../img/pizza1.jpeg");
     width:100%
@@ -26,4 +35,12 @@
 
 .card-header {
     background: white;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+
 }
