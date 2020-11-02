@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is the BOM</title>
+</head>
+<body>
+
+<h1>This is the BOM</h1>
+
+<script>
+    (function() {
+        "use strict";
+    })();
+    // Examples of BOMs
+   //  alert("This is a test!");
+   // let yourName = prompt("Enter your name.");
+   // let answer = confirm("Are you in the Jupiter cohort?");
+
+    // console.log(yourName);
+    // console.log(answer);
+    //
+    // let count = 0;
+    // let max = 10;
+    // let interval = 1000; // interval time in milliseconds
+    //
+    // let intervalId = setInterval(function () {
+    //     if (count >= max) {
+    //         clearInterval(intervalId);
+    //         console.log('All done');
+    //     } else {
+    //         count++;
+    //         console.log('Repeating this line ' + count);
+    //     }
+    // }, interval);
+
+    // TODO: Write a setInterval()
+    //
+    // var interval = 1000;
+    //
+    // function sayHello() {
+    //     console.log("Hello, Jupiter!")
+    // }
+    //
+    //
+    //
+    // setInterval(function(){
+    //     console.log("Hello, Jupiter!")
+    // }, interval)
+
+    var delay = 5000; // delay time in milliseconds
+
+    var timeoutId = setTimeout(function () {
+        alert('You have 5 seconds before page reload.');
+        // window.location = 'https://java.codeup.com/javascript-i/bom-and-dom/bom/'
+        location.reload()
+    }, delay);
+
+    // this is used for the redirects on webpages
+
+    // let cancel = confirm("Going to cancel your timeout?");
+    //
+    // if(cancel) {
+    //     clearTimeout(timeoutId);
+    // }
+
+    // to cancel the timeout, you can call
+    // clearTimeout(timeoutId);
+    // prior to the delay expiring
+
+
+
+</script>
+
+</body>
+</html>
