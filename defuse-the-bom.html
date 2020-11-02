@@ -2,18 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <title>Defuse the BOM</title>
+    <link rel="stylesheet" href="css/defuse-the-com.css">
 </head>
 <body>
 
 <h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
+<hr>
+<br>
+
+
+
+<i class="fas fa-bomb bomb"></i>
 
 <script>
 (function() {
     "use strict";
 
-    var detonationTimer = 5;
+    let detonationTimer = 5;
+    let interval = 1000;
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
@@ -27,21 +36,27 @@
         detonationTimer--;
     }
 
-    console.log(updateTimer());
+    // function countdown () {
+    //     setInterval(updateTimer, 1000);
+    // }
 
-    var min = 0;
-    var interval = 1000;
+    // console.log(updateTimer());
+    let countdown = setInterval(updateTimer, interval);
+    // var min = 0;
+    // var interval = 1000;
+    //
+    // let countdown = setInterval(function(updateTimer) {
+    //     document.getElementById('timer').innerHTML = detonationTimer;
+    //     if(detonationTimer === min) {
+    //         clearInterval(countdown);
+    //         alert("BOOM!");
+    //     } else {
+    //         detonationTimer--;
+    //         console.log(detonationTimer);
+    //     }
+    //
+    // }, interval);
 
-    let countdown = setInterval(function(updateTimer) {
-        if(detonationTimer === min) {
-            clearInterval(countdown);
-            alert("BOOM!");
-        } else {
-            detonationTimer--;
-            console.log(detonationTimer);
-        }
-
-    }, interval);
 
     // var countdown = setInterval(updateTimer) {
     //     if (count >= max) {
@@ -51,10 +66,10 @@
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
-        var stop = setTimeout(updateTimer) {
 
-        }
+    function defuseTheBOM() {
+        clearInterval(countdown);
+
     }
 
     // Don't modify anything below this line!
@@ -62,9 +77,16 @@
     // This causes the defuseTheBOM() function to be called
     // when the "defuser" button is clicked.
     // We will learn about events in the DOM lessons
-    var defuser = document.getElementById('defuser');
+    let defuser = document.getElementById('defuser');
     defuser.addEventListener('click', defuseTheBOM);
+
+    let bomb = documentgetElementById('bomb');
+    bomb.addEventListener()
+
+
 })();
 </script>
+
+
 </body>
 </html>
