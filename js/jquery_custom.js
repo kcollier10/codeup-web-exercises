@@ -20,5 +20,9 @@ $(document).ready(function() {
     let h1alert = $('h1').text();
     alert("The contents of h1 are: " + h1alert);
 
+    // $('ul').slideToggle()
 
+    $('#submit').click(function() {
+        $('h1').slideToggle("slow");
+    })
 });
