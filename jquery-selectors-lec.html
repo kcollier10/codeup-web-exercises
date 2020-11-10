@@ -100,8 +100,14 @@
 
         // ===================================== GETTING A VALUE
 
-        // var element = $("main"); // select tag
-        // console.log(element.html());
+        var element = $("main"); // select tag
+        element.html('hi mom')
+               .html();
+
+        //will still work, if we add an extra (), it would break;
+
+
+        console.log(element.html());
 
 
 
