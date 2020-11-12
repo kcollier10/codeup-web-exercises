@@ -17,7 +17,7 @@
 <body>
 <main id="container" class="container mt-5">
     <h1>Mouse Events Lecture</h1>
-    <h3 class="blue-text">Sub Header</h3>
+    <h3 class="sub-header">Sub Header</h3>
     <p class="blue-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -89,7 +89,7 @@
 
 
         // Double click and using "this" or "e.target"
-
+        //
         // $('li').dblclick(function() {
         //     console.log(this);
         //     $(this).css("background", "yellow");
@@ -120,12 +120,20 @@
 
         /* extra practice problems
 
-            - double clicking on the square makes it disappear
-            - clicking on a paragraph will change the text to 'Howdy!'
-            - hovering over the sub header makes the letters turn to uppercase while hovering over
+            - double clicking on the square makes it disappear */
+        $('.box').dblclick(function () {
+            $(this).css('display', 'none');
+        });
 
-        */
+           /* - clicking on a paragraph will change the text to 'Howdy!' */
+        $('.blue-text').click(function () {
+            $(this).text("Howdy!")
+        })
 
+           /* - hovering over the sub header makes the letters turn to uppercase while hovering over */
+        $('.sub-header').hover(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
     });
 
 </script>
