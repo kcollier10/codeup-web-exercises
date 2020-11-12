@@ -2,23 +2,27 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <style>
+
+    </style>
 </head>
 <body>
 
 <h1>Konami Code</h1>
-<div id="mario">
-    <img src="img/paper-mario.webp">
+<div class="mario">
+<!--    <img src="img/paper-mario.webp" alt="paper-mario">-->
 </div>
+<audio></audio>
 
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
 
-    // function mario () {
-    //     $('#mario').on("hover", function () {
-    //         $('#mario').animate({right: '250px'});
-    //     })
+    // let image = document.querySelector('.mario');
+
+    // function mario() {
+    //     image.style.border = "black";
     // }
 
     let konami = [];
@@ -26,15 +30,24 @@
     $(document).keydown(function (e) {
         konami.push(e.keyCode);
         if (konami.toString().indexOf(konamiCode) !== -1) {
-            setTimeout(() => {
-                document.getElementById('#mario').css("display", "hidden")
-            }, 500)
-            // alert("unlock!");
+            alert('success!');
+            $("body").css({
+                "background-image": "url(./img/paper-mario.webp)",
+                "background-repeat" : "no-repeat"
+            });
+            $('<audio></audio>').attr({
+                "src": "audio/mario.mp3",
+                "autoplay": "autoplay"
+            }).appendTo("body");
             konami.length = 0;
         }
     });
 
 
+            // ("#mario").append("<img id='mario-image' src='img/paper-mario.webp'/>");
+            // setTimeout(() => {
+            //     document.getElementById('#mario').css("display", "hidden")
+            // }, 500)
 
 
 
