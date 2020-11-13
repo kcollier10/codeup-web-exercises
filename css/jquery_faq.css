@@ -19,3 +19,20 @@ body {
 .highlight {
     background-color: yellow;
 }
+
+img {
+    width: 95%;
+    height: 95%;
+    align-items: center;
+    /*padding-left: 5%;*/
+    /*padding-top: 5%;*/
+
+}
+
+.picture-frame {
+    width: 30%;
+    height: 320px;
+    background-color: brown;
+    border: 3px inset black;
+    display: flex;
+}
