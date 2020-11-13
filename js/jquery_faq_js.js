@@ -6,7 +6,10 @@ $('#facts-list').on('click', function() {
 });
 
 $('dt').on('click', function() {
-    $(this).css("backgroundColor", "yellow");
+    $(this).toggleClass('highlight');
+    $(this).next().toggleClass('invisible');
+    console.log('test')
+
 });
 
 // $('#button').click(function() {

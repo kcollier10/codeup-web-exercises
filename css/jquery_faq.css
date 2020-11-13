@@ -16,3 +16,6 @@ body {
     visibility: hidden;
 }
 
+.highlight {
+    background-color: yellow;
+}
