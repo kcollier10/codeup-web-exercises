@@ -12,6 +12,21 @@ $('dt').on('click', function() {
 
 });
 
+$('#button-parks').on("click", function () {
+    $('ul').each(function(i) {
+        $(this).children().last().css("background", "yellow");
+    })
+})
+// $('.parks').children().last().css("color", "blue");
+
+$('h3').on("click", function() {
+    $(this).next().children().css("font-weight", "bold");
+})
+
+$('li').on("click", function () {
+    $(this).parent().children().first().css("color", "blue");
+})
+
 // $('#button').click(function() {
 //     $('<dd></dd>').toggleClass('invisible');
 //     if($('#list').hasClass('invisible')){
