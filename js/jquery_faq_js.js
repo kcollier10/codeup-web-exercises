@@ -27,6 +27,23 @@ $('li').on("click", function () {
     $(this).parent().children().first().css("color", "blue");
 })
 
+let left = $('#left');
+console.log(left);
+let center = $('#center');
+console.log(center);
+let right = $('#right');
+console.log(right);
+
+// $('#x').on("click", function () {
+//     $(this).parent().children().hide();
+// });
+
+// $('ul').hide().toggleClass('invisible');
+
+('h3').on("click", function () {
+    $(this).next().children().slideToggle();
+})
+
 // $('#button').click(function() {
 //     $('<dd></dd>').toggleClass('invisible');
 //     if($('#list').hasClass('invisible')){
