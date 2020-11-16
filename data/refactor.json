@@ -1,0 +1,23 @@
+{
+  "name": "Bash",
+  "numberOfStudents": 2,
+  "location": "Dallas, TX",
+  "studentArray": [
+    {
+      "student": "Student1",
+      "name": "Stacy R",
+      "dob": "1990-01-24",
+      "scholarship": true,
+      "capstone": null
+    },
+    {
+      "student": "Student2",
+      "name": "Juan M",
+      "dob": "1992-05-13",
+      "scholarship": false,
+      "capstone": null
+    }
+  ],
+  "remote": false,
+  "instructors": "Fernando M, Douglas H"
+}
