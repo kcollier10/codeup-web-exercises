@@ -1,0 +1,40 @@
+-AJAX READING QUESTIONS-
+
+WHAT IS AJAX AND WHAT IS IT USED FOR?
+AJAX = Asynchronous JavaScript And XML
+Not a programming language!
+Allows webpages to be updated asynchronously by exchanging data with a web server behind the scenes
+Can update parts of a web page without reloading the entire page
+Data is retrieved using the XMLHttpRequest
+Allows us to not need the user to do something specific
+
+WHAT IS JSON AND WHAT IS IT USED FOR?
+JSON = JavaScript Object Notation
+Used for storing and transporting data
+Often used when data is sent from a server to a web page
+JSON names require double quotes
+Arrays are inside square brackets
+Objects are inside curly braces
+“Packet that is sending the data”
+
+
+CAN METHODS BE INCLUDED IN A JSON FILE?
+No; used to communicate information, not functionality
+Cannot put a function inside a JSON object
+
+
+WHAT DOES ‘jqXhr’ REPRESENT IN THE CURRICULUM AJAX EXAMPLES?
+jQuery object that represents an AJAX request
+
+WHAT’S THE DIFFERENCE BETWEEN $.ajax() AND $.get()?
+The syntax
+$.ajax() is more customizable
+
+IS JQUERY REQUIRED TO MAKE AJAX REQUESTS?
+No, but would have to write different code for different browsers
+jQuery has been complimented for complementing AJAX requests
+Vanilla JS would be very verbose compared to using jQuery with AJAX
+
+WHAT POSSIBLE REAL WORLD EXAMPLE CAN YOU THINK OF WHERE AJAX MIGHT BE USED?
+Apps like Facebook or Twitter
+Maps
