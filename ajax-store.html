@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Tools!</title>
     <style>
-       .tableHeader {
-           flex-direction: row;
-       }
-
-        .tableBody {
+        .tableRow {
             display: flex;
             flex-direction: column;
+        }
+        .tableBody {
+            display: flex;
+            flex-direction: row;
         }
     </style>
 </head>
@@ -18,18 +18,18 @@
 
 <h1>My Tool Store</h1>
 
-<div id="products">
-    <div id="header">
-        <div class ="tableRow">
+<div id="col-12 products">
+    <div id="header col-6">
+        <div class="tableRow">
             <div class="tableHeader" id="title">Title</div>
             <div class="tableHeader" id="quantity">Quantity</div>
             <div class="tableHeader">Price</div>
             <div class="tableHeader">Categories</div>
         </div>
     </div>
-    <div class="tableBody" id="insertProducts"></div>
+    <div class="col-6 tableBody" id="insertProducts"></div>
 </div>
-<button id="button">Update w/Ajax</button>
+<button id="button">Update</button>
 
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -63,7 +63,10 @@
 
         inventory.forEach(function(tool) {
             html += "<div>"
-            html += tool.title + tool.quantity + "$" + tool.price + tool.categories
+            html += "<div>" + tool.title + "</div>"
+            html += "<div>" + tool.quantity + "</div>"
+            html += "<div>" + "$" + tool.price  + "</div>"
+            html += "<div>" + tool.categories + "</div>"
             html += "</div>"
         });
         $('#insertProducts').html(html)
