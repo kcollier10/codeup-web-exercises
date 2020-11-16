@@ -30,5 +30,26 @@
             "tool"
         ],
         "price": 10
+    }, {
+        "title": "Mulch",
+        "quantity": 700,
+        "categories": [
+            "outdoor"
+        ],
+        "price": 10
+    }, {
+        "title": "Plants",
+        "quantity": 10000,
+        "categories": [
+            "outdoor"
+        ],
+        "price": 10
+    }, {
+        "title": "Paint",
+        "quantity": 42,
+        "categories": [
+            "indoor"
+        ],
+        "price": 30
     }
 ]
