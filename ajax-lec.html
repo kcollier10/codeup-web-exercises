@@ -34,11 +34,11 @@
         // simple request
         //can make JSON requests to files and URLs
             // make an AJAX request to the Star Wars API
-            $.ajax("https://swapi.dev/api/people/1").done(function(data, status, jqXhr) {
+            $.ajax("./data/orders.json").done(function(data, status, jqXhr) {
                 alert("AJAX call completed successfully!");
                 console.log("Request status: " + status);
                 console.log("Data returned from server:");
-                console.log(data);
+                console.log(data[2]);
             });
 
 

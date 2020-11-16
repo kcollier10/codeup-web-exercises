@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+        /*tbody {*/
+        /*    background-color: green;*/
+        /*    width: 500px;*/
+        /*    height: 500px;*/
+        /*}*/
+    </style>
 </head>
 <body>
 
@@ -24,12 +31,15 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax("./data/inventory.json").done(function(data, status, jqXhr) {
+    $.ajax("./data/inventory.json").done(function(data) {
+        $('#insertProducts').append(data[0]);
         alert("Data retrieved!");
         console.log(data);
-    }).done(function(data) {
-        $('#insertProducts').append(data);
     })
+
+    // jqXhr.done(function(data) {
+    //     $('#insertProducts').innerText(data);
+    // })
 
     // TODO: Take the data from inventory.json and append it to the products table
 
