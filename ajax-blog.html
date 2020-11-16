@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>AJAX Blog</title>
+    <style>
+
+        body {
+            background: dimgrey;
+        }
+        #posts {
+            display: flex;
+            flex-direction: column;
+            /*border: 5px double black;*/
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .genre {
+            font-style: italic;
+            padding-left: 10px;
+        }
+
+        .content {
+            padding: 10px 10px;
+            margin: 0 auto;
+            background: lightgrey;
+        }
+
+        .header {
+            background: #3B94D9;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"></div>
+
+    </div>
+
+
+    <div class="container">
+        <div id="posts">
+
+        </div>
+    </div>
+
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+
+        "use strict";
+
+        $.ajax("data/blog.json").done(function(data){
+            // $('#posts').append(data);
+            console.log(data);
+            buildHTML(data);
+        });
+
+        function buildHTML (blog) {
+            let html = " ";
+            blog.forEach(function(post) {
+                html += "<div style='border: 3px double black'>";
+                html += "<h3 class='header'>" + post.title + "</h3>"
+                html += "<div class='header'>" + post.date;
+                html += "<div class='genre header'>" + post.categories + "</div>"
+                html += "<div class='content'>" + post.content + "</div>"
+                html += "</div>";
+            });
+            $('#posts').html(html)
+        }
+
+
+    </script>
+</body>
+</html>
