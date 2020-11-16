@@ -38,3 +38,11 @@ Vanilla JS would be very verbose compared to using jQuery with AJAX
 WHAT POSSIBLE REAL WORLD EXAMPLE CAN YOU THINK OF WHERE AJAX MIGHT BE USED?
 Apps like Facebook or Twitter
 Maps
+
+
+-can have nested objects
+-can have arrays as values
+-can have arrays of objects!
+    -display info about different tweets, stock market info
+-JSLint can test if your JSON code is valid
+-much more picky than vanilla JS syntax
