@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Review #2</title>
+</head>
+<body>
+    <h1>Let's review the DOM!</h1>
+
+    <p id="main-article">
+        Hello friendo!
+    </p>
+
+    <form action="">
+        <input id="add-to-list" type="text">
+    </form>
+    <p id="button">PRESS ME :)</p>
+
+    <ul id="list">
+        <li>banana</li>
+        <li>orange</li>
+        <li>apple</li>
+    </ul>
+
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+
+            $('h1').html("Hello there!");
+
+            $('h1').on("click", function () {
+                $(this).css("color", "green");
+            });
+
+            $('h1').on("click", function () {
+                $('#main-article').css("color", "blue")
+            });
+
+            // ------------------------------
+
+            $('#button').on("click", function () {
+                // grab the value of the input
+                var userInput = $('#add-to-list').val();
+                console.log(userInput);
+                var newListItem = "<li>" + userInput + "</li>";
+                // append to the unordered list
+                $('ul').append(newListItem);
+                // empty the input
+                $('#add-to-list').val("");
+            });
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+
+</html>
+
+<!--make an HTML document
+    add jQuery script
+    add use strict
+    add document.ready statement
+

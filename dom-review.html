@@ -27,5 +27,42 @@
         <button id="highlight">Highlight</button>
     </div>
 </div>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function () {
+
+        $('#add-to-list').on("click", function () {
+            // grab the value of the input
+            var userInput = $('#input').val();
+            console.log(userInput);
+            var newListItem = "<li>" + userInput + "</li>";
+            // append to the unordered list
+            $('#favorite-food').append(newListItem);
+            // empty the input
+            $('#input').val("");
+        });
+
+        $('#change-me').on("dblclick", function () {
+            $(this).css("backgroundColor", "purple");
+        });
+
+        $('#change-cohort').on("click", function () {
+            var userInput = $('#cohort-name').val();
+            var newListItem = "<li>" + userInput + "</li>";
+            $('#my-cohort').append(newListItem);
+            $('#cohort-name').val("");
+        })
+
+
+
+
+
+    });
+
+
+
+</script>
 </body>
 </html>
