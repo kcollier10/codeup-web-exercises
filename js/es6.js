@@ -96,6 +96,9 @@ let list = '<ul>';
 for (let developer of developers) {
   list += `<li>${developer}</li>`
 }
-  // TODO: rewrite the assignment below to use template strings
+list += '</ul>';
+
+
 //   list += '<li>' + developer + '</li>';
-// list += '</ul>';
+
+document.getElementById('main').innerHTML = list;
