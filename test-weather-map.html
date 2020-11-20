@@ -34,33 +34,8 @@
             </form>
         </nav>
 
-         <div class="container">
-             <div class="cityHeader"></div>
-         </div>
-
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col">-->
-<!--                    <div class="card">-->
-<!--            &lt;!&ndash;            <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
-<!--                        <div class="card-body">-->
-<!--                            <h5 class="card-title"></h5> &lt;!&ndash; city &ndash;&gt;-->
-<!--            &lt;!&ndash;                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>&ndash;&gt;-->
-<!--                        </div>-->
-<!--                        <ul class="list-group list-group-flush">-->
-<!--                            <li class="list-group-item"></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
-
         <div id="show"></div>
         <div id="testDiv"></div>
-
-
 
         <div class="container">
             <div class="row">
@@ -101,25 +76,26 @@
         units: "imperial",
         exclude: "minutely,hourly,alerts"
     }).done(function (data) {
-        let empty = '';
-        for (let i = 0; i < 5; i++) {
-            empty += cardHTML(data);
-            $('#testDiv').html(empty);
-        }
+        // for (let i = 0; i < 5; i++) {
+            cardHTML(data);
+            // $('#testDiv').html(empty);
+        // }
 
     });
 
 
     function cardHTML (data) {
         let html = "";
-        html += "<div class='card-body col-12 col-sm col-md-5'>"
-        html += "<h5 class='card-header'>" + getDate(data.current) + "</h5>"
-        html += "<ul class='list-group'>"
-        html += "<ul class='list-group'><li class='list-group-item'>" + data.current.weather[0].description + "</li>"
-        html += "<li class='list-group-item'>" + data.current.humidity + "</li>"
-        html += "<li class='list-group-item'>" + data.current.temp + "</li></ul>"
-        html += "</div></div>"
-
+        for(var i = 0; i < 5; i++) {
+            let description = data.daily[i].weather[0].description
+            html += "<div class='card-body col-12 col-sm col-md-5'>"
+            html += "<h5 class='card-header'>" + getDate(data.current[0]) + "</h5>"
+            html += "<ul class='list-group'>"
+            html += "<ul class='list-group'><li class='list-group-item'>" + description + "</li>"
+            html += "<li class='list-group-item'>" + data.daily[i].humidity + "</li>"
+            html += "<li class='list-group-item'>" + data.daily[i].temp + "</li></ul>"
+            html += "</div></div>"
+        }
         $("#show").html(html);
     }
 
@@ -175,7 +151,6 @@
 
     newMarker.on('dragend', marker)
 
-    $('.cityHeader').html(day);
 
 
 
@@ -185,33 +160,6 @@
 
 
     //
-    // $('#button').click(function(data) {
-    //     let city = $('#userInput').val();
-    //     //
-    //     if (city !== '') {
-    //         //         $.ajax({
-    //         //             url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + OPEN_WEATHER_APPID,
-    //         //             dataType: "jsonp",
-    //         //             units: "metric",
-    //         //             exclude: "minutely,hourly,alerts",
-    //         //             success: (function (data) {
-    //         let display = show(data);
-    //         $('#show').html(display);
-    //         $('#city').val('');
-    //     } else {
-    //         $('#error').html("Field cannot be empty");
-    //     }
-    // })
-    //         });
-    //     } else {
-    //         $('#error').html("Field cannot be empty");
-    //     }
-    // })
-    //
-    // function show(data) {
-    //
-    //     console.log(data);
-    // }
 
 
 
