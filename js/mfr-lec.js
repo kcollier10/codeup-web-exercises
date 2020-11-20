@@ -208,9 +208,13 @@ const lyrics = ['we','all','live','in','a','yellow','submarine'];
 //TODO TOGETHER: Using reduce, let's turn this into a string.
 
 // const wordString = lyrics.reduce(function(words, word) {
-const result = lyrics.reduce((prev, curr) => prev + ' ' + curr )
+const result = lyrics.reduce((currentString, word) => currentString + ' ' + word )
 console.log(result);
 
+const sentence = lyrics.reduce(function(currentString, word) {
+    return `${currentString} ${word}`;
+});
+console.log(sentence);
 
 // Bonus: Create an Array of all the unique fur colors! Hint: check out the ES6 'Set' data type.
 
