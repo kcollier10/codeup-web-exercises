@@ -191,9 +191,9 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 /*==============================================*/
 
 
-function getArea({height, width}){
-	return height * width;
-}
+// function getArea({height, width}){
+// 	return height * width;
+// }
 
 let shape1 = {
 	height: 10,
@@ -205,13 +205,14 @@ let shape2 = {
 	width: 5
 }
 
-console.log(getArea(shape1)); //100
+// console.log(getArea(shape1)); //100
 console.log(getArea(shape2)); //25
 
 
 //TODO: Refactor the getArea function from above using arrow syntax
 
-
+let getArea = (height, width) => height * width
+console.log(getArea(shape1));
 
 
 

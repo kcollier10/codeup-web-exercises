@@ -57,9 +57,9 @@
 
 
 
-        <div class="container">
-            <div id="show"></div>
-        </div>
+        <div id="show"></div>
+        <div id="testDiv"></div>
+
 
 
         <div class="container">
@@ -81,19 +81,51 @@
 
     "use strict";
 
-    var getDate = () => {
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
+    let markerArray = [-98.568736, 29.524087];
+
+    let getDate = () => {
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
 
         today = mm + "/" + dd + "/" + yyyy;
         return today;
     }
 
+
+    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        APPID: OPEN_WEATHER_APPID,
+        lat: markerArray[1],
+        lon: markerArray[0],
+        units: "imperial",
+        exclude: "minutely,hourly,alerts"
+    }).done(function (data) {
+        let empty = '';
+        for (let i = 0; i < 5; i++) {
+            empty += cardHTML(data);
+            $('#testDiv').html(empty);
+        }
+
+    });
+
+
+    function cardHTML (data) {
+        let html = "";
+        html += "<div class='card-body col-12 col-sm col-md-5'>"
+        html += "<h5 class='card-header'>" + getDate(data.current) + "</h5>"
+        html += "<ul class='list-group'>"
+        html += "<ul class='list-group'><li class='list-group-item'>" + data.current.weather[0].description + "</li>"
+        html += "<li class='list-group-item'>" + data.current.humidity + "</li>"
+        html += "<li class='list-group-item'>" + data.current.temp + "</li></ul>"
+        html += "</div></div>"
+
+        $("#show").html(html);
+    }
+
     function geocode(search, token) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
+        let baseUrl = 'https://api.mapbox.com';
+        let endPoint = '/geocoding/v5/mapbox.places/';
         return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
             .then(function(res) {
                 return res.json();
@@ -116,48 +148,36 @@
             });
     }
 
+    function marker() {
+        markerArray = [];
+        let location = newMarker.getLngLat()
+        markerArray[0] = (location.lng);
+        markerArray[1] = (location.lat);
+    }
 
     mapboxgl.accessToken = mapboxToken;
-    var map = new mapboxgl.Map({
+    let map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [-98.4936, 29.4241],
         zoom: 8
     });
 
-    var placeMarker = new mapboxgl.Marker()
-        .setLngLat([-98.4916, 29.4241])
-        .addTo(map)
-        .setDraggable(true)
 
-
-
-
-    $.get("https://api.openweathermap.org/data/2.5/onecall", {
-        APPID: OPEN_WEATHER_APPID,
-        lat: 29.423017,
-        lon: -98.48527,
-        units: "imperial",
-        exclude: "minutely,hourly,alerts"
-    }).done(function (data) {
-        console.log(data);
-        cardHTML(data);
-    });
-
-    function cardHTML (day) {
-        let html = "";
-        html += "<div class='col-12 col-sm col-md-5'>"
-        html += "<div class='card'><h5 class='card-header'>" + + day.name + getDate(day.current) + "</h5>"
-        html += "<ul class='list-group'>"
-        html += "<ul class='list-group'><li class='list-group-item'>" + day.current.weather[0].description + "</li>"
-        html += "<li class='list-group-item'>" + day.current.humidity + "</li>"
-        html += "<li class='list-group-item'>" + day.current.temp + "</li></ul>"
-        html += "</div></div>"
-
-        $("#show").html(html);
+    let markerOptions = {
+        color: 'blue',
+        draggable: true
     }
 
-    $('.cityHeader').html(day.name);
+    let newMarker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([-98.568736, 29.524087])
+        .addTo(map)
+
+    newMarker.on('dragend', marker)
+
+    $('.cityHeader').html(day);
+
+
 
 
 
