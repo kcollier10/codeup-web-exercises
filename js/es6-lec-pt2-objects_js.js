@@ -107,7 +107,7 @@
 /*==============================================*/
 //Destructuring with Arrays
 
-let cats = ["CJ", "Claude", "Max"];
+// let cats = ["CJ", "Claude", "Max"];
 
 //oldway
 // let cat1 = cats[0];
@@ -115,8 +115,8 @@ let cats = ["CJ", "Claude", "Max"];
 // let cat3 = cats[2];
 
 
-//new way
-let [ cat1, cat2, cat3 ] = cats;
+// new way
+// let [ cat1, cat2, cat3 ] = cats;
 
 // console.log(cat1);
 // console.log(cat2);
@@ -135,25 +135,29 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: new way
 
-let [ a, b, c, d, e ] = alphabet;
-
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-console.log(e);
+// let [ a, b, c, d, e ] = alphabet;
+//
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
 
 
 
 //TODO TOGETHER: To skip an element...
 
-
+// const[a, ,c, d] = alphabet;
 
 
 
 //TODO TOGETHER: To get all elements...Spread operator *BONUS
 
-
+// const[a, b, c, ...rest ] = alphabet;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(rest);
 
 
 
@@ -187,9 +191,9 @@ console.log(e);
 /*==============================================*/
 
 
-function getArea({height, width}){
-	return height * width;
-}
+// function getArea({height, width}){
+// 	return height * width;
+// }
 
 let shape1 = {
 	height: 10,
@@ -201,13 +205,14 @@ let shape2 = {
 	width: 5
 }
 
-console.log(getArea(shape1)); //100
+// console.log(getArea(shape1)); //100
 console.log(getArea(shape2)); //25
 
 
 //TODO: Refactor the getArea function from above using arrow syntax
 
-
+let getArea = (height, width) => height * width
+console.log(getArea(shape1));
 
 
 
