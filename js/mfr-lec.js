@@ -149,9 +149,7 @@ const sum = numbersArray.reduce((growingTotal, currentNumber) => {
 console.log(sum);
 
 // TODO: Using .reduce, subtract all numbers in the numbers Array from a starting point of 100.
-const subtract = numbersArray.reduce((loweringTotal, currentNumber) => {
-    return loweringTotal - currentNumber
-}, 100)
+const subtract = numbersArray.reduce((loweringTotal, currentNumber) => (loweringTotal - currentNumber), 100)
 console.log(subtract);
 
 const shoppingCarts = [
@@ -180,19 +178,39 @@ const shoppingCarts = [
 
 // TODO: Using .reduce, return the total number of apples.
 
-let totalApples = shoppingCarts.reduce(function(apple) => {
-    return shoppingCarts.apples
-});
+let totalApples = shoppingCarts.reduce((total, cart) => {
+    return total + cart.apples;
+    // console.log(cart.apples);
+}, 0);
+console.log(totalApples);
 
 
 const colors = ['red','orange','red','blue','blue','green','red'];
 
 // TODO: Count the number of times a color appears in this Array. Hint: your initial value should be an empty object.
 
+// function countColors (colors) {
+const colorCounts = colors.reduce(function(colorCounts, color) {
+    if (typeof colorCounts[color] === 'undefined') {
+        colorCounts[color] = 1;
+    } else {
+        colorCounts[color] += 1;
+    }
+    return colorCounts;
+}, {});
+    // return colorCounts;
+
+console.log(colorCounts);
+
 
 const lyrics = ['we','all','live','in','a','yellow','submarine'];
 
 //TODO TOGETHER: Using reduce, let's turn this into a string.
+
+// const wordString = lyrics.reduce(function(words, word) {
+const result = lyrics.reduce((prev, curr) => prev + ' ' + curr )
+console.log(result);
+
 
 // Bonus: Create an Array of all the unique fur colors! Hint: check out the ES6 'Set' data type.
 
