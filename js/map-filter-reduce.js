@@ -41,7 +41,7 @@ const users = [
 // Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 
 const languagesArray = users.filter(function(language, ){
-    if (language.languages > 2) {
+    if (language.languages.length > 2) {
         return language.languages;
     }
 
@@ -69,13 +69,12 @@ console.log(average);
 
 // Use .reduce to get the longest email from the list of users.
 
-const longestEmail = users.reduce((accumulator, iteration) => {
-    let longest = '';
-    if(iteration.email.length > longest.length) {
-        longest = iteration.email.length;
+const longestEmail = emailArray.reduce(function(current, user) {
+    if(user.length > current.length) {
+        current = user;
     }
-    return longest;
-});
+        return current;
+}, "");
 
 console.log(longestEmail);
 
