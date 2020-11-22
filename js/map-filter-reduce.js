@@ -80,7 +80,7 @@ console.log(longestEmail);
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-const instructors = users.reduce(function(singleString, user) {
-    return `${singleString} ${user.name}`;
-}, 'Your instructors are');
-console.log(instructors);
+// const instructors = users.reduce(function(singleString, user) {
+//     return `${singleString} ${user.name}`;
+// }, 'Your instructors are');
+// console.log(instructors);
