@@ -157,3 +157,25 @@ let uniqueUserLanguages = users.reduce((languageSet,user) => {
 
 console.log(uniqueUserLanguages);
 
+// APPROACH :
+// create a long array of all languages using reduce
+// convert the array into a set
+// will take out any duplicates and return a unique array
+
+
+// STEPS:
+// add all languages using reduce
+// convert to Set
+// convert Set back to array
+
+const allLanguages = users.reduce((languageSet, user) => {
+    return languageSet.concat(user.languages)
+}, []);
+console.log(allLanguages)
+
+const uniqueLanguages = new Set(allLanguages);
+console.log(uniqueLanguages);
+const arrUnique = Array.from(uniqueLanguages);
+console.log(arrUnique);
+
+

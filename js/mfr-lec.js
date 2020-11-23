@@ -260,3 +260,7 @@ let furColors = hamsters.reduce((colorSet,hamster) => {
     }
     return colorSet;
 }, new Set);
+
+const furColors2 = hamsters.reduce((colorSet, hamster) => {
+    return colorSet.concat(hamster.fur)
+}, []);
