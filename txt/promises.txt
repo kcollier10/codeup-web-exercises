@@ -17,9 +17,26 @@ WHAT ARE JS PROMISES?
 -.catch accepts a callback that will run when the promise is rejected
 
 
+  - a value that represents an asynch action that may be in a pending, fulfilled, or rejected state
+  - provides syntax that exposes the returned values when fulfilled/rejected
+  - avoids 'callback hell' by using a flatter syntax
+
+
+
 
 ----------------------------------------------------------------------------
 WHY SHOULD I CARE ABOUT JS PROMISES?
+
+  Web development constantly deals with asynchronous actions...
+    - making a request to a RESTful API
+    - downloading large assets
+    - loading the document
+    - timed actions
+    - reading and writing to files
+    - etc.
+  Promises make writing asynchronous code much cleaner!
+  Frequently used in other JS libraries
+
 
 
 
@@ -27,6 +44,8 @@ WHY SHOULD I CARE ABOUT JS PROMISES?
 HOW DO JS PROMISES RELATE TO WHAT I ALREADY KNOW?
 
 -Similar to an AJAX request
+-the jqXhr object from jQuery AJAX requests
+
 
 
 ----------------------------------------------------------------------------
