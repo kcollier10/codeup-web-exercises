@@ -178,4 +178,15 @@ console.log(uniqueLanguages);
 const arrUnique = Array.from(uniqueLanguages);
 console.log(arrUnique);
 
+// or
+
+const unique = users.reduce((languageSet, user) => {
+    user.languages.forEach(language =>
+    languageSet.includes(language) ? languageSet : languageSet.push(language)
+    )
+    return languageSet
+}, [])
+
+console.log(unique);
+
 

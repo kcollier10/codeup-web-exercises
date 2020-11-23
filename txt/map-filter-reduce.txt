@@ -1,0 +1,27 @@
+Map, filter, reduce
+
+.filter -
+ Can return true; return !user;
+Should return a boolean value
+Can also do !object to return false
+False returns an empty array
+If true, it doesn't filter anything out
+
+
+.map -
+Will not modify original array, instead creates new one
+Like an advanced forEach loop - cannot specify a stopping point
+“forEach loop with added stuff”
+Produces an array with same length as original array
+
+
+.map can be used for double checking user input
+-built mad-libs javascript and was able to lowercase all elements in an array before the conditionals using .map
+
+.reduce -
+Has two parameters - accumulation and current value
+Accumulator has a starting point
+-can be listed as an empty string if you’re expecting the value of the returned items to be a string
+-can use any number as starting point
+
+
