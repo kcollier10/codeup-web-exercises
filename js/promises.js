@@ -1,28 +1,24 @@
-// function successIfEvenUTCSecond() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(function() {
-//             const second = new Date().getUTCSeconds();
-//             if (second % 2 === 0) {
-//                 resolve(second);
-//             } else {
-//                 reject(second);
-//             }
-//         }, 2000);
-//     });
-// }
-//
-// const aPromise = successIfEvenUTCSecond();
-//
-// aPromise.then((data) => {
-//     console.log(`${data} is an even number!`);
-// });
-// aPromise.catch((error) => {
-//     console.log(`${error} is an odd number!`);
-// })
-
 const wait = (ms) => new Promise(
     (resolve) => setTimeout(resolve, ms)
 );
 
 wait(1000).then(() => console.log('You\'ll see this after 1 second'));
 wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
+
+
+
+// -------------------------------------------------------
+// EXERCISE 2
+const github = fetch('https://api.github.com/users', {headers: {'Authorization': 'token 1fd6f0de11c18a90b2c9e772f473cbfc1747fc40'}});
+
+function lastCommit () {
+    let userInput = $('#input').val();
+    $('#button').on("click", function () {
+        if(userInput !== "") {
+            //maybe do a resolve here?
+        }
+    })
+}
+
+console.log($('#input').val());
+// const myPromise = fetch('https://api.github.com/users');
