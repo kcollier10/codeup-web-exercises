@@ -45,6 +45,8 @@ HOW DO JS PROMISES RELATE TO WHAT I ALREADY KNOW?
 
 -Similar to an AJAX request
 -the jqXhr object from jQuery AJAX requests
+-a complement to using AJAX requests
+
 
 
 
@@ -70,8 +72,9 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 
 ----------------------------------------------------------------------------
-How will I likely use promises in the future (what is the real world application)?
+HOW WILL I LIKELY USE PROMISES IN THE FUTURE (WHAT IS THE REAL WORLD APPLICATION)?
 
+-will work with APIs to handle them
 
 ----------------------------------------------------------------------------
 EXTRA RESEARCH:

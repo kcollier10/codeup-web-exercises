@@ -1,0 +1,9 @@
+DOM Events
+
+Type is a string
+Listener is a function
+
+Can pass a defined function (sayHello) or write function inside parentheses
+
+Why would you use an anonymous function here, why would you use a callback?
+—callback function can be used anywhere and is readily available to be used, anonymous function will generally only be used in only one place in our JavaScript
