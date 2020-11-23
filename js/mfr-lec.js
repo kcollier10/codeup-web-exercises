@@ -251,3 +251,12 @@ var hamsters = [
         dateOfBirth: "January 14"
     }
 ];
+
+
+let furColors = hamsters.reduce((colorSet,hamster) => {
+    let colors = hamster.fur;
+    for(let color of colors){
+        colorSet.add(color)
+    }
+    return colorSet;
+}, new Set);
