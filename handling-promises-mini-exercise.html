@@ -30,6 +30,15 @@
     aPromise.then(() => console.log('VALUE_HERE is an even number'));
     aPromise.catch(() => console.log('VALUE_HERE is an odd number'));
 
+    // or
+
+    aPromise.then((data) => {
+        console.log(`${data} is an even number!`);
+    });
+    aPromise.catch((error) => {
+        console.log(`${error} is an odd number!`);
+    })
+
 
 </script>
 </body>
