@@ -6,6 +6,11 @@
 </head>
 <body>
 
+
+<div id="starwars"></div>
+
+
+<script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
 
@@ -38,6 +43,15 @@
     aPromise.catch((error) => {
         console.log(`${error} is an odd number!`);
     });
+
+    $.ajax('https://swapi.dev/api/people/1')
+        .done(function(data) {
+            $('#starwars').append(data.name, data.gender, data.eye_color)
+            console.log(data.gender);
+        })
+        .fail(function(jqXHR, message) {
+            console.log(message);
+        })
 
 
 </script>

@@ -24,16 +24,30 @@ waitTwo(3000).then(() => console.log('You\'ll see this after 3 seconds wee'));
 
 // -------------------------------------------------------
 // EXERCISE 2
-const github = fetch('https://api.github.com/users', {headers: {'Authorization': 'token 1fd6f0de11c18a90b2c9e772f473cbfc1747fc40'}});
+
+
+fetch('https://api.github.com/users/kcollier10/events/public', {
+    method: 'GET',
+    headers: {'Authorization': 'token' + githubID},
+})
+    .then(response => response.json())
+    .then(users => {
+         users.forEach(userObj => {
+             console.log(userObj.actor);
+         })
+     })
+    .then(console.log)
+    .catch(console.error);
+
 
 function lastCommit () {
-    let userInput = $('#input').val();
     $('#button').on("click", function () {
-        if(userInput !== "") {
+        let userInput = $('#input').val();
+        console.log(userInput)
+
             //maybe do a resolve here?
-        }
     })
 }
 
-console.log($('#input').val());
-// const myPromise = fetch('https://api.github.com/users');
+console.log(lastCommit);
+

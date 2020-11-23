@@ -98,3 +98,11 @@ PARAMETERS:
 
 “Once the promise reaches a final state, the state won’t change (that is, the computation will not be done again ) even if you attach .then handler multiple times” -CodeBurst
 “If a .then() returns a promise, the resolution (technically called settlement) of the that promise is forwarded to next .then call”-CodeBurst
+
+
+Promise.all() is helpful when you have multiple APIs
+Takes in an array of promises
+Will wait until both of those promises are resolved
+
+Promise.race()
+Will pick the API that gives info back the fastest
