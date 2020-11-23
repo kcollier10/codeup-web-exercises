@@ -1,0 +1,20 @@
+BOM (Browser Object Model)
+
+-alert(), confirm(), and prompt() are BOMs
+-Qualities of objects in JS - can have values, can have properties, can have methods
+-clearInterval stops the setInterval
+-setTimeout and clearTimeout will return an id
+-Can name variables whatever, can’t change setInterval or clearInterval
+-setInterval - set to variable since you’ll be using clearInterval
+-Both take in two functions () {}; () can be named or empty
+-As soon as page loads, multiple BOMs will start; not one right after the other
+-Can be paused while waiting for user interaction
+-Order doesn’t matter, both will start on page load
+Window.location
+-location property called on function, NOT method
+
+location.reload ()
+—no parameters, comes from cache/instance of browser
+
+location.reload(true)
+—used for server-side information or databases

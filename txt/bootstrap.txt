@@ -1,0 +1,17 @@
+BOOTSTRAP
+
+Faster and easier
+Allows for no custom CSS
+Utilizes a grid system
+Bootstrap 5 is coming out soon; constantly being developed
+Customization requires override
+Sites can start to look the same
+Has JavaScript and jQuery dependencies
+
+
+
+BOOTSTRAP GRID
+
+Columns must be children of a row
+Columns, once in a row, can have nested rows (out of scope for Codeup)
+ON mobile-first approach, we don’t have to set a breakpoint on the mobile specs

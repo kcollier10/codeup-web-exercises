@@ -1,0 +1,24 @@
+DOM (Document Object Model)
+
+A browser api that creates a tree-like structure of JS objects to represent and allow manipulation of a web page
+Using JS code, we van access and manipulate nodes, their properties, and any descendent nodes, giving us control over the elements of a web page
+
+getElementByID - only selects one thing
+
+HTMLCollection is NOT the same thing as an array
+Can’t use pop, push, shift, unshift because they only work with arrays
+Can play with JS console because we don’t have an IFFE yet
+However, you can convert HTMLCollection to array
+
+getElementByTagName - example: sections
+Can access the first one by using brackets []
+
+querySelector() can replace the above methods
+Id uses a ‘#’ like in CSS
+
+Accessing form text can be done, usually used in website where empty fields don’t allow the submit button to work
+
+Adding a name to a form will allow you to access different forms
+
+innerText doesn’t pay as much attention to elements inside, pays more attention to text; strips out the tags
+
