@@ -1,0 +1,78 @@
+Promises - JS II
+
+
+----------------------------------------------------------------------------
+WHAT ARE JS PROMISES?
+
+-a promise is a container for a future value
+-JavaScript object
+-represents an event that might not have happened yet
+-“the eventual completion (or failure) of an asynchronous operation and its resulting value” -MDN
+-“a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function” -MDN
+-attach callbacks instead of passing them into a function
+-has two methods - .then and .catch
+-.then accepts two callback that will run when the promise is resolved
+—resolved
+—rejected
+-.catch accepts a callback that will run when the promise is rejected
+
+
+
+----------------------------------------------------------------------------
+WHY SHOULD I CARE ABOUT JS PROMISES?
+
+
+
+----------------------------------------------------------------------------
+HOW DO JS PROMISES RELATE TO WHAT I ALREADY KNOW?
+
+-Similar to an AJAX request
+
+
+----------------------------------------------------------------------------
+HOW DO I CREATE AND USE JS PROMISES?
+
+Example:
+function successCallback(result) {
+  console.log("Audio file ready at URL: " + result);
+}
+function failureCallback(error) {
+  console.error("Error generating audio file: " + error);
+}
+createAudioFileAsync(audioSettings, successCallback, failureCallback);
+    -to-
+const promise = createAudioFileAsync(audioSettings);
+promise.then(successCallback, failureCallback);
+    -to-
+createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
+
+
+
+
+
+----------------------------------------------------------------------------
+How will I likely use promises in the future (what is the real world application)?
+
+
+----------------------------------------------------------------------------
+EXTRA RESEARCH:
+
+GUARANTEES:
+* Callbacks will never be called before the completion of the current run of the JavaScript event loop.
+* Callbacks added with then(), as above, will be called even after the success or failure of the asynchronous operation.
+* Multiple callbacks may be added by calling then() several times. Each callback is executed one after another, in the order in which they were inserted.
+
+4 STATES:
+1. fulfilled: Action related to the promise succeeded
+2. rejected: Action related to the promise failed
+3. pending: Promise is still pending i.e not fulfilled or rejected yet
+4. settled: Promise has fulfilled or rejected
+
+PARAMETERS:
+* Promise constructor takes only one argument,a callback function.
+* Callback function takes two arguments, resolve and reject
+* Perform operations inside the callback function and if everything went well then call resolve.
+* If desired operations do not go well then call reject.
+
+“Once the promise reaches a final state, the state won’t change (that is, the computation will not be done again ) even if you attach .then handler multiple times” -CodeBurst
+“If a .then() returns a promise, the resolution (technically called settlement) of the that promise is forwarded to next .then call”-CodeBurst
