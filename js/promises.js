@@ -26,7 +26,7 @@ waitTwo(3000).then(() => console.log('You\'ll see this after 3 seconds wee'));
 // EXERCISE 2
 
 
-fetch('https://api.github.com/users/kcollier10/events/public', {
+fetch('https://api.github.com/users/${username}/events/public', {
     method: 'GET',
     headers: {'Authorization': 'token' + githubID},
 })
