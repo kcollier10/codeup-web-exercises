@@ -31,12 +31,10 @@ fetch('https://api.github.com/users/kcollier10/events/public', {
     headers: {'Authorization': 'token' + githubID},
 })
     .then(response => response.json())
-    .then(users => {
-         users.forEach(userObj => {
-             console.log(userObj.actor);
-         })
-     })
-    .then(console.log)
+    .then(data => {
+        var lastPush = data[0].created_at
+        $('#push-info').html(lastPush);
+    })
     .catch(console.error);
 
 
