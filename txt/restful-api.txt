@@ -1,0 +1,24 @@
+CRUD =>
+
+-- CREATE
+POST https://justinblog.net/posts // create a new post
+
+-- READ
+GET https://justinblog.net/posts // get all the posts
+GET https://justinblog.net/posts/1 // get back a specific post
+
+-- UPDATE
+PUT https://justinblog.net/posts/1 // update the post
+
+-- DELETE
+DELETE https://justinblog.net/posts/1 // delete the post
+
+
+
+fetch('https://codeup-json-server.glitch.me/movies')
+    .then(res => res.json())
+    .then(console.log)
+    .catch(console.error)
+
+const apiURL = 'https://codeup-json-server.glitch.me/movies';
+
