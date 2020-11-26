@@ -1,0 +1,38 @@
+================================= WARM UP QUESTIONS (15min)
+
+—What are JS promises?—
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+
+—What are the three states of a promise?—
+A promise may be in one of 3 possible states: fulfilled, rejected, or pending.
+
+
+
+—Why are they useful?—
+
+
+
+
+—How can a JS promise be ‘handled’?—
+Promises can be consumed by registering functions using .then and .catch methods. then() is invoked when a promise is either resolved or rejected.
+
+
+
+—What is promise chaining?—
+Adding methods onto promises
+
+
+—How do JS promises relate to what we have covered at Codeup previously?—
+Similar to AJAX requests, but more asynchronous
+jqXhr
+
+
+—What is the difference between Promise.all() and Promise.race()?—
+* Promise.race() takes an array (or any iterable) and returns a promise that resolves with the value of the first resolved promise in the iterable, or rejects with the reason of the first promise that rejects.
+* Promise.all() takes an array (or any iterable) and returns a promise that resolves when all of the promises in the iterable argument have resolved, or rejects with the reason of the first passed promise that rejects.
+
+
+
+—How do promises relate to the Fetch API?—
+Fetch allows us to make network request and handle responses easier than our old friend XMLHttpRequest(XHR). One of the main differences is that Fetch API uses Promises, which provides a way to avoid callbacks hell and boilerplate heavy code that XMLHttpRequest(XHR) provides.
