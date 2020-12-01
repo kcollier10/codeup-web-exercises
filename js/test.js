@@ -1,52 +1,73 @@
-"use strict";
+window.addEventListener('load', ()=>{
 
-console.log("It worked!");
+    resize(); // Resizes the canvas once the window loads
+    document.addEventListener('mousedown', startPainting);
+    document.addEventListener('mouseup', stopPainting);
+    document.addEventListener('mousemove', sketch);
+    window.addEventListener('resize', resize);
+});
 
-var pies = ["red", "orange", "yellow", "green", "blue", "purple"]
+const canvas = document.querySelector('#canvas');
 
-function lastThree(pies) {
-    return pies.slice(3, 6);
+// Context for the canvas for 2 dimensional operations
+const ctx = canvas.getContext('2d');
+
+// Resizes the canvas to the available size of the window.
+function resize(){
+    ctx.canvas.width = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
 }
 
-// or return pies.slice(pies.length - 3);
+// Stores the initial position of the cursor
+let coord = {x:0 , y:0};
 
+// This is the flag that we are going to use to
+// trigger drawing
+let paint = false;
 
-
-console.log(lastThree(pies), 'Expected outcome is: ' + ["green", "blue", "purple"]);
-
-pies.reverse();
-console.log(pies);
-
-
-// TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
-//  and return an array of phone numbers without any symbols. Log the output of the returned array.
-
-/* EXAMPLE...
-    var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-    cleanPhoneNumbers(phoneNumbers);
-    the above code should output the following...
-       2105552020
-       2305552020
-       5125553030
-*/
-
-var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-
-
-
-function cleanPhoneNumbers(phoneNums) {
-    var output = [];
-    var phoneNumsArr = phoneNums.split('\n');
-    phoneNumsArr.forEach(function(phoneNum) {
-        var phoneNumArr = phoneNum.split('-');
-        var phoneNumberWithoutDashes = phoneNumArr.join('');
-        output.push(phoneNumberWithoutDashes);
-    })
-    return output;
+// Updates the coordianates of the cursor when
+// an event e is triggered to the coordinates where
+// the said event is triggered.
+function getPosition(event){
+    coord.x = event.clientX - canvas.offsetLeft;
+    coord.y = event.clientY - canvas.offsetTop;
 }
-//
-var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
-for (var i = 0; i < cleanNumsArr.length; i += 1) {
-    console.log(cleanNumsArr[i]);
+
+// The following functions toggle the flag to start
+// and stop drawing
+function startPainting(event){
+    paint = true;
+    getPosition(event);
+}
+function stopPainting(){
+    paint = false;
+}
+
+function sketch(event){
+    if (!paint) return;
+    ctx.beginPath();
+
+    ctx.lineWidth = 5;
+
+    // Sets the end of the lines drawn
+    // to a round shape.
+    ctx.lineCap = 'round';
+
+    ctx.strokeStyle = 'green';
+
+    // The cursor to start drawing
+    // moves to this coordinate
+    ctx.moveTo(coord.x, coord.y);
+
+    // The position of the cursor
+    // gets updated as we move the
+    // mouse around.
+    getPosition(event);
+
+    // A line is traced from start
+    // coordinate to this coordinate
+    ctx.lineTo(coord.x , coord.y);
+
+    // Draws the line.
+    ctx.stroke();
 }
