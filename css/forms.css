@@ -8,8 +8,7 @@ h3 {
 
 section {
     background-color: lightskyblue;
-    border: black;
-    border-style: double;
+    border: black 3px double;
     padding: 10px;
 }
 
